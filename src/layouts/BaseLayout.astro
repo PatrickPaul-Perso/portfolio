@@ -1,0 +1,60 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  lang: 'en' | 'fr';
+}
+
+const { title, description, lang } = Astro.props;
+const baseUrl = import.meta.env.BASE_URL;
+const base = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
+const alternateLang = lang === 'en' ? 'fr' : 'en';
+const alternateLabel = lang === 'en' ? 'Français' : 'English';
+const disclosure = lang === 'en'
+  ? 'Generative AI was used as an engineering and writing assistant in the production of this website. All published content and technical decisions were reviewed and approved by Patrick Paul.'
+  : 'L’IA générative a servi d’assistante à l’ingénierie et à la rédaction de ce site Web. Patrick Paul a révisé et approuvé l’ensemble du contenu publié et des décisions techniques.';
+const transparencyLabel = lang === 'en' ? 'AI transparency' : 'Transparence sur l’IA';
+---
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <a href={`${base}${alternateLang}/`} hreflang={alternateLang} data-language={alternateLang}>{alternateLabel}</a>
+    </header>
+    <slot />
+    <footer>
+      <p class="notice">
+        {disclosure}
+      </p>
+      <p><a href={`${base}ai-usage/`}>{transparencyLabel}</a></p>
+    </footer>
+    <script>
+      document.querySelectorAll<HTMLAnchorElement>('[data-language]').forEach((link) => {
+        link.addEventListener('click', () => {
+          const language = link.dataset.language;
+          if (!language) return;
+
+          try {
+            localStorage.setItem('portfolio-language', language);
+          } catch {
+            // Navigation still works when storage is unavailable.
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
+
+<style>
+  .site-header { width: min(1120px, calc(100% - 2rem)); margin-inline: auto; padding-top: 1.25rem; display: flex; justify-content: flex-end; }
+  .site-header a { min-height: 44px; display: inline-flex; align-items: center; padding-inline: .75rem; }
+</style>

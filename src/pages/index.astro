@@ -1,0 +1,27 @@
+---
+const baseUrl = import.meta.env.BASE_URL;
+const base = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="robots" content="noindex" />
+    <title>Patrick Paul</title>
+    <script is:inline define:vars={{ base }}>
+      let stored;
+      try {
+        stored = localStorage.getItem('portfolio-language');
+      } catch {
+        // Fall back to the browser language when storage is unavailable.
+      }
+      const preferred = stored ?? (navigator.languages?.some((language) => language.toLowerCase().startsWith('fr')) ? 'fr' : 'en');
+      window.location.replace(`${base}${preferred}/`);
+    </script>
+    <noscript><meta http-equiv="refresh" content="0; url=./en/" /></noscript>
+  </head>
+  <body>
+    <p><a href="./en/">Continue in English</a> · <a href="./fr/">Continuer en français</a></p>
+  </body>
+</html>
