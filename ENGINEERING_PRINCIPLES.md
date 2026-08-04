@@ -3,7 +3,10 @@
 - Build for maintainability.
 - Automate repetitive work.
 - Reduce operational complexity.
-- Prefer open standards and portable solutions.
+- Prefer open-source technologies when they meet the operational need.
+- Prefer open standards, documented interfaces, and portable solutions.
+- Minimize vendor lock-in and preserve practical migration paths.
+- Design systems that can be inspected, self-hosted, automated, and understood.
 - Document important decisions.
 - Design for failure and recovery.
 - Keep humans accountable for consequential decisions.
