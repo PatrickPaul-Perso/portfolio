@@ -19,6 +19,11 @@ All notable changes to this project will be documented in this file.
 - Complete bilingual landing page with professional positioning, value summary, capability preview, motivation, and contact sections.
 - Reserved professional-photo and contact areas for later human completion.
 - Responsive infrastructure-inspired visual system and skip navigation.
+- Dependency-health documentation with explicit vulnerability classification and remediation strategy.
+
+### Changed
+
+- Standardized pull request engineering-health reporting and continuous-improvement guidance in `AGENTS.md`.
 
 ### Fixed
 

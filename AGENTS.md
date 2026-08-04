@@ -112,7 +112,9 @@ A change is complete when:
 - internal links and GitHub Pages base paths remain valid;
 - English and French structures remain synchronized;
 - documentation and ADRs are updated when required;
-- the pull request summarizes changes, validation, and known limitations.
+- the pull request includes the Standard Engineering Health Report defined below;
+- the pull request includes a `Suggested AGENTS.md improvements` section that proposes repeatable improvements or explicitly states `None.`;
+- every dependency update leaves the repository deployable and has been validated with `npm ci`, `npm run check`, and `npm run build`.
 
 ## Validation before commit
 
@@ -124,3 +126,160 @@ npm run build
 ```
 
 Also verify responsive behaviour, keyboard navigation, language switching, reduced-motion behaviour, and internal links when affected.
+
+## Pull Request Requirements
+
+Every pull request must:
+
+- remain focused on one coherent objective;
+- explain the completed implementation and current pull request status;
+- identify known limitations, remaining risks, and decisions that require Patrick's approval;
+- preserve a buildable, deployable state after every commit;
+- include the Standard Engineering Health Report as part of the Definition of Done;
+- include a section named `Suggested AGENTS.md improvements` that either proposes repeatable project practices or explicitly states `None.`;
+- remain unmerged until the required human approval has been provided.
+
+## Standard Engineering Health Report
+
+Every pull request must include the following report, using these section names and covering every listed item.
+
+### Summary
+
+- objective
+- implementation completed
+- pull request status
+
+### Validation
+
+Always report:
+
+- `npm ci`
+- `npm run check`
+- `npm run build`
+
+Also summarize:
+
+- responsive verification
+- localization verification
+- accessibility verification
+- internal-link verification
+
+### Engineering Health
+
+#### Dependency vulnerabilities
+
+Separate production dependencies from development dependencies. For each category report:
+
+- Critical
+- High
+- Moderate
+- Low
+
+#### Dependency status
+
+Report:
+
+- updated packages
+- deferred packages
+- outdated packages
+
+#### Build quality
+
+Report:
+
+- build status
+- check status
+- generated routes
+- GitHub Pages compatibility
+
+### Accessibility
+
+Summarize:
+
+- keyboard navigation
+- visible focus
+- semantic landmarks
+- reduced motion
+- colour contrast
+
+### Performance
+
+Summarize:
+
+- JavaScript footprint
+- bundle-size impact
+- image optimization
+- Lighthouse regressions when results are available
+
+### Technical debt
+
+List all remaining technical debt, including:
+
+- deferred dependency upgrades
+- pending framework upgrades
+- framework limitations
+- future refactoring opportunities
+
+### Documentation
+
+List every documentation file updated.
+
+### Risks
+
+List any remaining risks.
+
+### Human approval required
+
+Explicitly list every decision requiring Patrick's approval.
+
+### Recommendation
+
+Finish with exactly one of:
+
+- `READY FOR REVIEW`
+- `READY TO MERGE`
+- `HUMAN DECISION REQUIRED`
+- `NOT READY`
+
+## Dependency maintenance policy
+
+- Run `npm audit` and `npm outdated` when assessing dependency health or changing dependencies.
+- Classify each vulnerability as production or development, state whether the affected code ships to GitHub Pages, and record severity, fix availability, major-version requirements, and implementation risk.
+- Apply patch and compatible minor updates when validation shows they are safe.
+- Do not apply framework or build-tool major upgrades without explicit human approval and a focused migration plan.
+- Never use `npm audit fix --force`.
+- Do not add overrides solely to hide or bypass an advisory.
+- After every dependency update, run `npm ci`, `npm run check`, and `npm run build` before committing.
+- Keep `package-lock.json` synchronized and document deferred vulnerabilities in `docs/dependency-health.md`.
+- Confirm that declared dependencies are used and that generated files are not accidentally committed.
+
+## Documentation expectations
+
+- Update only documentation affected by the change.
+- Keep `CHANGELOG.md` focused on user-visible or engineering-significant changes.
+- Use `docs/devlog.md` to record implementation context and validation outcomes.
+- Maintain `docs/dependency-health.md` whenever known vulnerabilities remain.
+- Update ADRs only for durable architecture decisions; do not use them as routine change logs.
+- Keep technical documentation in English and ensure it remains consistent with the implementation.
+
+## Pull request quality expectations
+
+- Make the report evidence-based: distinguish completed validation from assumptions and unavailable measurements.
+- Report zero-count vulnerability categories instead of omitting them.
+- Distinguish packages installed for the build from assets actually published to the static site.
+- State deferred work explicitly instead of implying that it was fixed.
+- Keep the pull request description synchronized with the latest commit and validation results.
+
+## Continuous improvement expectations
+
+Recurring engineering improvements should automatically be proposed for `AGENTS.md` whenever they become repeatable project practices.
+
+Automatic proposals must not modify the following without explicit human approval:
+
+- project vision;
+- engineering principles;
+- architecture rules;
+- accessibility requirements;
+- security requirements;
+- localization strategy;
+- Git workflow.
