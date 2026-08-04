@@ -1,0 +1,45 @@
+---
+import { publicProfile } from '../data/publicProfile';
+
+interface Props {
+  lang: 'en' | 'fr';
+  compact?: boolean;
+}
+
+const { lang, compact = false } = Astro.props;
+
+const labels = lang === 'en'
+  ? {
+      email: 'Email',
+      emailAria: `Email Patrick Paul at ${publicProfile.email}`,
+      linkedInAria: 'Patrick Paul on LinkedIn (opens in a new tab)',
+      gitHubAria: 'Patrick Paul on GitHub (opens in a new tab)',
+    }
+  : {
+      email: 'Courriel',
+      emailAria: `Envoyer un courriel à Patrick Paul à ${publicProfile.email}`,
+      linkedInAria: 'Patrick Paul sur LinkedIn (s’ouvre dans un nouvel onglet)',
+      gitHubAria: 'Patrick Paul sur GitHub (s’ouvre dans un nouvel onglet)',
+    };
+---
+
+<ul class:list={['professional-links', { compact }]}>
+  <li>
+    <a href={publicProfile.emailHref} aria-label={labels.emailAria}>{labels.email}</a>
+  </li>
+  <li>
+    <a href={publicProfile.linkedIn} target="_blank" rel="noopener noreferrer" aria-label={labels.linkedInAria}>LinkedIn</a>
+  </li>
+  <li>
+    <a href={publicProfile.gitHub} target="_blank" rel="noopener noreferrer" aria-label={labels.gitHubAria}>GitHub</a>
+  </li>
+</ul>
+
+<style>
+  .professional-links { display: flex; flex-wrap: wrap; gap: .75rem; margin: 0; padding: 0; list-style: none; }
+  .professional-links a { min-height: 44px; display: inline-flex; align-items: center; padding: .55rem .8rem; border: 1px solid var(--border); border-radius: .55rem; color: var(--text); font-weight: 700; text-decoration: none; }
+  .professional-links a:hover { border-color: var(--accent-soft); background: rgb(46 168 255 / 8%); }
+  .professional-links.compact { gap: .25rem 1rem; }
+  .professional-links.compact a { padding: .35rem 0; border-color: transparent; color: var(--accent-soft); }
+  .professional-links.compact a:hover { border-color: transparent; background: transparent; text-decoration: underline; text-underline-offset: .2em; }
+</style>

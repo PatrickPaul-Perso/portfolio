@@ -1,5 +1,7 @@
 ---
 import '../styles/global.css';
+import ProfessionalLinks from '../components/ProfessionalLinks.astro';
+import { publicProfile } from '../data/publicProfile';
 
 interface Props {
   title: string;
@@ -19,6 +21,21 @@ const disclosure = lang === 'en'
 const transparencyLabel = lang === 'en' ? 'AI transparency' : 'Transparence sur l’IA';
 const skipLabel = lang === 'en' ? 'Skip to main content' : 'Aller au contenu principal';
 const languageNavLabel = lang === 'en' ? 'Language selection' : 'Choix de la langue';
+const footer = lang === 'en'
+  ? {
+      role: 'Senior Digital Infrastructure Specialist',
+      linksLabel: 'Patrick Paul professional links',
+      locationLabel: 'Location',
+      availabilityLabel: 'Available for',
+      availability: ['Remote technical positions', 'Consulting mandates'],
+    }
+  : {
+      role: 'Spécialiste principal en infrastructures numériques',
+      linksLabel: 'Liens professionnels de Patrick Paul',
+      locationLabel: 'Lieu',
+      availabilityLabel: 'Disponible pour',
+      availability: ['Postes techniques à distance', 'Mandats de consultation'],
+    };
 ---
 <!doctype html>
 <html lang={lang}>
@@ -40,11 +57,35 @@ const languageNavLabel = lang === 'en' ? 'Language selection' : 'Choix de la lan
       </div>
     </header>
     <slot />
-    <footer>
-      <p class="notice">
-        {disclosure}
-      </p>
-      <p><a href={`${base}${lang}/ai-usage/`}>{transparencyLabel}</a></p>
+    <footer class="site-footer">
+      <div class="footer-profile">
+        <div class="footer-identity">
+          <strong class="footer-name">Patrick Paul</strong>
+          <span>{footer.role}</span>
+          <span class="footer-practice">Linux <span aria-hidden="true">•</span> DevOps <span aria-hidden="true">•</span> IoT</span>
+        </div>
+        <nav aria-label={footer.linksLabel}>
+          <ProfessionalLinks lang={lang} compact />
+        </nav>
+        <div class="footer-details">
+          <p>
+            <strong>{footer.locationLabel}</strong>
+            <span>{publicProfile.location}</span>
+          </p>
+          <div>
+            <strong>{footer.availabilityLabel}</strong>
+            <ul>
+              {footer.availability.map((item) => <li>{item}</li>)}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="transparency-notice">
+        <p class="notice">
+          {disclosure}
+        </p>
+        <p><a href={`${base}${lang}/ai-usage/`}>{transparencyLabel}</a></p>
+      </div>
     </footer>
     <script>
       document.querySelectorAll<HTMLAnchorElement>('[data-language]').forEach((link) => {
@@ -67,8 +108,23 @@ const languageNavLabel = lang === 'en' ? 'Language selection' : 'Choix de la lan
   .skip-link { position: fixed; top: .75rem; left: .75rem; z-index: 20; padding: .7rem 1rem; border-radius: .5rem; background: var(--text); color: var(--background); font-weight: 800; transform: translateY(-180%); }
   .skip-link:focus { transform: translateY(0); }
   .site-header { width: min(1180px, calc(100% - 2rem)); margin-inline: auto; padding-top: 1.25rem; }
-  .header-inner { min-height: 3.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; border-bottom: 1px solid var(--border); }
+  .header-inner { min-height: 4rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; border-bottom: 1px solid var(--border); }
   .site-name, .language-link { min-height: 44px; display: inline-flex; align-items: center; text-decoration: none; }
-  .site-name { color: var(--text); font-weight: 800; letter-spacing: -.02em; }
+  .site-name { color: var(--text); font-size: clamp(1.2rem, 3vw, 1.55rem); font-weight: 800; line-height: 1.1; letter-spacing: -.03em; }
   .language-link { padding-inline: .75rem; }
+  .site-footer { display: grid; gap: 2rem; }
+  .footer-profile { display: grid; grid-template-columns: minmax(15rem, 1.15fr) minmax(12rem, .8fr) minmax(15rem, 1fr); gap: 2rem clamp(2rem, 5vw, 4rem); align-items: start; }
+  .footer-identity { display: grid; gap: .2rem; color: var(--text); }
+  .footer-name { font-size: 1.35rem; letter-spacing: -.02em; }
+  .footer-practice { color: var(--accent-soft); font-weight: 700; }
+  .footer-details { display: grid; gap: 1rem; }
+  .footer-details p, .footer-details ul { margin: 0; }
+  .footer-details p, .footer-details div { display: grid; gap: .25rem; }
+  .footer-details strong { color: var(--text); }
+  .footer-details ul { padding-left: 1.2rem; }
+  .transparency-notice { padding-top: 1.5rem; border-top: 1px solid var(--border); }
+  .transparency-notice p { margin-block: 0 .75rem; }
+  @media (max-width: 760px) {
+    .footer-profile { grid-template-columns: 1fr; gap: 1.5rem; }
+  }
 </style>

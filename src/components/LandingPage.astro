@@ -1,4 +1,6 @@
 ---
+import ProfessionalLinks from './ProfessionalLinks.astro';
+
 interface Props {
   lang: 'en' | 'fr';
 }
@@ -12,7 +14,7 @@ const content = {
     practice: 'Linux, DevOps and IoT Practitioner',
     headline: 'Practical infrastructure for connected, automated, and research-driven environments.',
     introduction: 'I build and improve digital systems that help technical teams work with greater reliability, clarity, and confidence.',
-    primaryCta: 'Contact options coming soon',
+    primaryCta: 'Contact me',
     secondaryCta: 'Explore my capabilities',
     portraitLabel: 'Reserved area for Patrick Paul’s professional portrait',
     portraitTitle: 'Professional portrait',
@@ -53,9 +55,9 @@ const content = {
     motivationNote: 'The best systems are not only capable. They are inspectable, explainable, and maintainable by the people responsible for them.',
     contactEyebrow: 'Start a conversation',
     contactTitle: 'Let’s discuss useful technical work.',
-    contactBody: 'I welcome conversations about meaningful remote technical employment and consulting mandates involving infrastructure, platforms, automation, integration, reliability, or IoT.',
-    contactPlaceholder: 'Contact details coming soon',
-    contactNote: 'Patrick will add and approve direct contact information before publication.',
+    contactBody: 'Contact me about remote technical positions or consulting mandates involving infrastructure, Linux, DevOps, automation, integration, reliability, or IoT.',
+    contactLinksLabel: 'Contact Patrick Paul',
+    contactNote: 'Available for remote technical positions and consulting mandates.',
   },
   fr: {
     role: 'Spécialiste principal en infrastructures numériques',
@@ -63,7 +65,7 @@ const content = {
     practice: 'Spécialiste Linux, DevOps et IoT',
     headline: 'Des infrastructures pratiques pour les milieux connectés, automatisés et axés sur la recherche.',
     introduction: 'Je conçois et améliore des systèmes numériques qui permettent aux équipes techniques de travailler avec plus de fiabilité, de clarté et de confiance.',
-    primaryCta: 'Coordonnées à venir',
+    primaryCta: 'Me joindre',
     secondaryCta: 'Explorer mes capacités',
     portraitLabel: 'Zone réservée au portrait professionnel de Patrick Paul',
     portraitTitle: 'Portrait professionnel',
@@ -104,9 +106,9 @@ const content = {
     motivationNote: 'Les meilleurs systèmes ne sont pas seulement performants. Ils peuvent être inspectés, expliqués et entretenus par les personnes qui en sont responsables.',
     contactEyebrow: 'Amorcer une discussion',
     contactTitle: 'Parlons d’un travail technique utile.',
-    contactBody: 'Je souhaite échanger au sujet d’un emploi technique stimulant à distance ou d’un mandat de consultation en infrastructure, plateformes, automatisation, intégration, fiabilité ou IoT.',
-    contactPlaceholder: 'Coordonnées à venir',
-    contactNote: 'Patrick ajoutera et approuvera ses coordonnées directes avant la publication.',
+    contactBody: 'Communiquez avec moi au sujet d’un poste technique à distance ou d’un mandat de consultation en infrastructure, Linux, DevOps, automatisation, intégration, fiabilité ou IoT.',
+    contactLinksLabel: 'Communiquer avec Patrick Paul',
+    contactNote: 'Disponible pour des postes techniques à distance et des mandats de consultation.',
   },
 } as const;
 
@@ -122,7 +124,7 @@ const t = content[lang];
       <p class="hero-statement">{t.headline}</p>
       <p class="lead">{t.introduction}</p>
       <div class="actions">
-        <span class="button primary pending" aria-disabled="true">{t.primaryCta}</span>
+        <a class="button primary" href="#contact">{t.primaryCta}</a>
         <a class="button" href="#capabilities">{t.secondaryCta}</a>
       </div>
     </div>
@@ -206,10 +208,10 @@ const t = content[lang];
       <h2 id="contact-title">{t.contactTitle}</h2>
       <p class="section-copy">{t.contactBody}</p>
     </div>
-    <div class="contact-action">
-      <span class="button primary pending" aria-disabled="true">{t.contactPlaceholder}</span>
+    <nav class="contact-action" aria-label={t.contactLinksLabel}>
+      <ProfessionalLinks lang={lang} />
       <p>{t.contactNote}</p>
-    </div>
+    </nav>
   </section>
 </main>
 
@@ -248,7 +250,6 @@ const t = content[lang];
   .contact-section { display: grid; grid-template-columns: minmax(0, 1fr) minmax(16rem, .55fr); gap: 3rem 6rem; align-items: end; margin-bottom: clamp(5rem, 10vw, 8rem); padding: clamp(2rem, 6vw, 4rem); border: 1px solid rgb(110 198 255 / 28%); border-radius: 1.5rem; background: radial-gradient(circle at 100% 0, rgb(46 168 255 / 18%), transparent 42%), var(--surface); }
   .contact-action { display: grid; gap: 1rem; justify-items: start; }
   .contact-action p { margin: 0; color: var(--muted); font-size: .86rem; }
-  .button.pending { cursor: not-allowed; filter: saturate(.45); opacity: .82; }
   @media (max-width: 860px) {
     .hero { grid-template-columns: 1fr; }
     .portrait-card { width: min(100%, 20rem); justify-self: start; }
