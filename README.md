@@ -41,6 +41,7 @@ npm run build
 - [Engineering principles](./ENGINEERING_PRINCIPLES.md)
 - [Contributing](./CONTRIBUTING.md)
 - [Generative AI usage](./AI_USAGE.md)
+- [Dependency health](./docs/dependency-health.md)
 - [Roadmap](./ROADMAP.md)
 - [Architecture decision records](./docs/adr/)
 

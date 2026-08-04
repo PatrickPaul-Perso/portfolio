@@ -1,5 +1,11 @@
 # Development Log
 
+## 2026-08-04 — Dependency health and engineering workflow
+
+The post-merge Milestone 1 correction now includes a documented dependency-health assessment and a repeatable pull request quality standard. The audit found no safe patch or compatible minor dependency updates: the remaining Astro, sharp, and esbuild advisories require a framework-major migration and are deferred for a focused, human-approved change.
+
+`AGENTS.md` now makes the Standard Engineering Health Report part of the Definition of Done, requires dependency, build, accessibility, performance, documentation, risk, and approval reporting, and asks every pull request to consider repeatable improvements to the agent guidance. Milestone 1 remains complete; this work does not begin Milestone 2 or change the deployed site architecture.
+
 ## 2026-08-04 — Post-merge localized navigation correction
 
 Milestone 1 remains complete. A focused post-merge correction added equivalent English and Canadian French AI transparency routes, connected each footer to its matching localized page, and preserved the original transparency URL as a language-aware redirect.
