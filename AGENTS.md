@@ -53,6 +53,7 @@ Stop and ask for clarification when these conditions are not met.
 - Do not mix refactoring with feature work unless required.
 - Avoid large rewrites when a focused change is sufficient.
 - Every push must leave the repository buildable and coherent.
+- Every pull request should leave the repository in a slightly better state than it was found.
 - Use concise Conventional Commit messages.
 
 ## Architecture
@@ -272,9 +273,9 @@ Finish with exactly one of:
 
 ## Continuous improvement expectations
 
-Recurring engineering improvements should automatically be proposed for `AGENTS.md` whenever they become repeatable project practices.
+Recurring engineering practices should automatically be incorporated into `AGENTS.md` when they become repeatable project practices.
 
-Automatic proposals must not modify the following without explicit human approval:
+Automatic changes must not modify the following without explicit human approval:
 
 - project vision;
 - engineering principles;
