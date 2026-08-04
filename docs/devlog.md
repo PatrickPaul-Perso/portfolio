@@ -1,5 +1,11 @@
 # Development Log
 
+## 2026-08-04 — Post-merge localized navigation correction
+
+Milestone 1 remains complete. A focused post-merge correction added equivalent English and Canadian French AI transparency routes, connected each footer to its matching localized page, and preserved the original transparency URL as a language-aware redirect.
+
+The landing-page calls to action were also aligned with the content currently available. The contact action is now explicitly non-interactive until Patrick adds contact details, while the secondary action points to the existing capability preview rather than implying that project case studies are available.
+
 ## 2026-08-04 — Milestone 1 landing page
 
 The initial preview was expanded into a complete bilingual landing page for technical recruiters and infrastructure, platform, DevOps, and SRE managers. A shared Astro component keeps the English and Canadian French structures synchronized while presenting Patrick’s hands-on focus, professional value, five core capabilities, motivation, and preferred technical opportunities.
