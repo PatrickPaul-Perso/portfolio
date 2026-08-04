@@ -1,0 +1,40 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  lang: 'en' | 'fr';
+}
+
+const { title, description, lang } = Astro.props;
+const alternateLang = lang === 'en' ? 'fr' : 'en';
+const alternateLabel = lang === 'en' ? 'Français' : 'English';
+---
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <a href={`/${alternateLang}/`} hreflang={alternateLang}>{alternateLabel}</a>
+    </header>
+    <slot />
+    <footer>
+      <p class="notice">
+        Generative AI was used as an engineering and writing assistant in the production of this website. All published content and technical decisions were reviewed and approved by Patrick Paul.
+      </p>
+      <p><a href="/portfolio/ai-usage/">AI transparency</a></p>
+    </footer>
+  </body>
+</html>
+
+<style>
+  .site-header { width: min(1120px, calc(100% - 2rem)); margin-inline: auto; padding-top: 1.25rem; display: flex; justify-content: flex-end; }
+  .site-header a { min-height: 44px; display: inline-flex; align-items: center; padding-inline: .75rem; }
+</style>
