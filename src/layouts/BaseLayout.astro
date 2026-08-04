@@ -8,8 +8,14 @@ interface Props {
 }
 
 const { title, description, lang } = Astro.props;
+const baseUrl = import.meta.env.BASE_URL;
+const base = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
 const alternateLang = lang === 'en' ? 'fr' : 'en';
 const alternateLabel = lang === 'en' ? 'Français' : 'English';
+const disclosure = lang === 'en'
+  ? 'Generative AI was used as an engineering and writing assistant in the production of this website. All published content and technical decisions were reviewed and approved by Patrick Paul.'
+  : 'L’IA générative a servi d’assistante à l’ingénierie et à la rédaction de ce site Web. Patrick Paul a révisé et approuvé l’ensemble du contenu publié et des décisions techniques.';
+const transparencyLabel = lang === 'en' ? 'AI transparency' : 'Transparence sur l’IA';
 ---
 <!doctype html>
 <html lang={lang}>
@@ -22,15 +28,29 @@ const alternateLabel = lang === 'en' ? 'Français' : 'English';
   </head>
   <body>
     <header class="site-header">
-      <a href={`/${alternateLang}/`} hreflang={alternateLang}>{alternateLabel}</a>
+      <a href={`${base}${alternateLang}/`} hreflang={alternateLang} data-language={alternateLang}>{alternateLabel}</a>
     </header>
     <slot />
     <footer>
       <p class="notice">
-        Generative AI was used as an engineering and writing assistant in the production of this website. All published content and technical decisions were reviewed and approved by Patrick Paul.
+        {disclosure}
       </p>
-      <p><a href="/portfolio/ai-usage/">AI transparency</a></p>
+      <p><a href={`${base}ai-usage/`}>{transparencyLabel}</a></p>
     </footer>
+    <script>
+      document.querySelectorAll<HTMLAnchorElement>('[data-language]').forEach((link) => {
+        link.addEventListener('click', () => {
+          const language = link.dataset.language;
+          if (!language) return;
+
+          try {
+            localStorage.setItem('portfolio-language', language);
+          } catch {
+            // Navigation still works when storage is unavailable.
+          }
+        });
+      });
+    </script>
   </body>
 </html>
 
