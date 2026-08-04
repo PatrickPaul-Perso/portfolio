@@ -1,5 +1,11 @@
 # Development Log
 
+## 2026-08-04 — Forward-looking professional positioning
+
+The English and Canadian French landing-page copy now presents Patrick’s motivation for hands-on engineering, practical problem solving, automation, and building reliable digital infrastructure through positive, forward-looking language.
+
+The positioning reflects experience across operational environments, R&D initiatives, proof-of-concept platforms, and technology demonstrations. The two language versions retain equivalent structure and meaning.
+
 ## 2026-08-04 — Approved public contact information
 
 Patrick approved publication of his professional email, LinkedIn profile, and GitHub profile. The temporary contact actions were replaced with accessible links, and the bilingual contact section now invites inquiries about remote technical positions and consulting mandates.

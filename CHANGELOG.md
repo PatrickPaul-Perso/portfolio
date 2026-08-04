@@ -27,6 +27,7 @@ All notable changes to this project will be documented in this file.
 
 - Standardized pull request engineering-health reporting and continuous-improvement guidance in `AGENTS.md`.
 - Replaced temporary contact actions with approved, accessible contact links for remote technical positions and consulting mandates.
+- Refined the bilingual professional positioning with forward-looking language covering operational environments, R&D initiatives, proof-of-concept platforms, and technology demonstrations.
 
 ### Fixed
 
