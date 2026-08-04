@@ -1,14 +1,28 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+const baseUrl = import.meta.env.BASE_URL;
+const base = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
 ---
-<BaseLayout lang="en" title="AI Transparency | Patrick Paul" description="How generative AI was used in the production of this professional portfolio.">
-  <main id="main-content">
-    <section class="hero" aria-labelledby="title">
-      <p class="eyebrow">AI transparency</p>
-      <h1 id="title">Generative AI assisted the process. Human judgment remained accountable.</h1>
-      <p class="lead">Generative AI was used to accelerate ideation, writing, translation, documentation, software development, accessibility review, and design exploration.</p>
-      <p class="lead">All published content, factual claims, technical decisions, and source code were reviewed and approved by Patrick Paul before publication.</p>
-      <p><a class="button" href="../en/">Return to portfolio</a></p>
-    </section>
-  </main>
-</BaseLayout>
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="robots" content="noindex" />
+    <title>AI Transparency | Patrick Paul</title>
+    <script is:inline define:vars={{ base }}>
+      let stored;
+      try {
+        stored = localStorage.getItem('portfolio-language');
+      } catch {
+        // Fall back to the browser language when storage is unavailable.
+      }
+      const preferred = stored ?? (navigator.languages?.some((language) => language.toLowerCase().startsWith('fr')) ? 'fr' : 'en');
+      window.location.replace(`${base}${preferred}/ai-usage/`);
+    </script>
+    <noscript><meta http-equiv="refresh" content="0; url=../en/ai-usage/" /></noscript>
+  </head>
+  <body>
+    <p><a href="../en/ai-usage/">Continue in English</a> · <a href="../fr/ai-usage/">Continuer en français</a></p>
+  </body>
+</html>

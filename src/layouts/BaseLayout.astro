@@ -5,9 +5,10 @@ interface Props {
   title: string;
   description: string;
   lang: 'en' | 'fr';
+  localizedPath?: string;
 }
 
-const { title, description, lang } = Astro.props;
+const { title, description, lang, localizedPath = '' } = Astro.props;
 const baseUrl = import.meta.env.BASE_URL;
 const base = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
 const alternateLang = lang === 'en' ? 'fr' : 'en';
@@ -34,7 +35,7 @@ const languageNavLabel = lang === 'en' ? 'Language selection' : 'Choix de la lan
       <div class="header-inner">
         <a class="site-name" href={`${base}${lang}/`}>Patrick Paul</a>
         <nav aria-label={languageNavLabel}>
-          <a class="language-link" href={`${base}${alternateLang}/`} hreflang={alternateLang} data-language={alternateLang}>{alternateLabel}</a>
+          <a class="language-link" href={`${base}${alternateLang}/${localizedPath}`} hreflang={alternateLang} data-language={alternateLang}>{alternateLabel}</a>
         </nav>
       </div>
     </header>
@@ -43,7 +44,7 @@ const languageNavLabel = lang === 'en' ? 'Language selection' : 'Choix de la lan
       <p class="notice">
         {disclosure}
       </p>
-      <p><a href={`${base}ai-usage/`}>{transparencyLabel}</a></p>
+      <p><a href={`${base}${lang}/ai-usage/`}>{transparencyLabel}</a></p>
     </footer>
     <script>
       document.querySelectorAll<HTMLAnchorElement>('[data-language]').forEach((link) => {
