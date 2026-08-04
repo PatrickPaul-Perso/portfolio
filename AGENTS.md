@@ -32,6 +32,20 @@ The portfolio should consistently reflect practical experience with open and int
 - Describe Node-RED, Losant, and Apache NiFi accurately as tools used in prototype or experimental work unless stronger production evidence is provided.
 - Avoid overstating proficiency, production scale, or operational responsibility.
 
+## Definition of ready
+
+A change is ready for implementation when:
+
+- the intended outcome is clear;
+- the scope is limited to one coherent concern;
+- required content and factual claims are available;
+- no unresolved user decision blocks implementation;
+- the change does not conflict with an accepted ADR;
+- validation criteria are identified;
+- affected English and French content is identified.
+
+Stop and ask for clarification when these conditions are not met.
+
 ## Change discipline
 
 - Make small, targeted, incremental changes.
@@ -86,6 +100,19 @@ Target WCAG 2.2 AA.
 - Require human review before publication.
 - Keep technical decisions and factual validation human-owned.
 - Do not present generated content as independently verified.
+
+## Definition of done
+
+A change is complete when:
+
+- the requested outcome is implemented without unrelated changes;
+- applicable checks pass;
+- responsive and keyboard behaviour are preserved;
+- accessibility and reduced-motion requirements are preserved;
+- internal links and GitHub Pages base paths remain valid;
+- English and French structures remain synchronized;
+- documentation and ADRs are updated when required;
+- the pull request summarizes changes, validation, and known limitations.
 
 ## Validation before commit
 
