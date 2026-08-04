@@ -1,0 +1,269 @@
+---
+interface Props {
+  lang: 'en' | 'fr';
+}
+
+const { lang } = Astro.props;
+
+const content = {
+  en: {
+    role: 'Senior Digital Infrastructure Specialist',
+    name: 'Patrick Paul',
+    practice: 'Linux, DevOps and IoT Practitioner',
+    headline: 'Practical infrastructure for connected, automated, and research-driven environments.',
+    introduction: 'I build and improve digital systems that help technical teams work with greater reliability, clarity, and confidence.',
+    primaryCta: 'Discuss an opportunity',
+    secondaryCta: 'Explore my work',
+    portraitLabel: 'Reserved area for Patrick Paul’s professional portrait',
+    portraitTitle: 'Professional portrait',
+    portraitNote: 'To be provided and approved by Patrick',
+    valueEyebrow: 'Professional value',
+    valueTitle: 'Complex environments made reliable, understandable, and maintainable.',
+    valueBody: 'For more than 20 years, I have supported research and technical environments by improving the infrastructure beneath the work. My focus is hands-on engineering: solving problems, integrating systems, automating operations, and leaving platforms easier to operate than I found them.',
+    years: 'years of applied technical experience',
+    domains: ['Linux and containers', 'Automation and integration', 'Data and observability', 'IoT and edge systems'],
+    capabilitiesEyebrow: 'Capability preview',
+    capabilitiesTitle: 'Five ways I help technical environments move forward.',
+    capabilitiesIntro: 'Each capability is grounded in practical delivery, open standards, and systems that remain understandable to the people who operate them.',
+    capabilities: [
+      {
+        title: 'Design digital infrastructure',
+        description: 'Shape maintainable Linux, container, data, and edge foundations around real operational needs.',
+      },
+      {
+        title: 'Connect existing systems',
+        description: 'Integrate established and emerging platforms through documented interfaces, open protocols, and pragmatic migration paths.',
+      },
+      {
+        title: 'Automate operations',
+        description: 'Replace fragile manual steps with repeatable workflows that improve reliability and reduce operational load.',
+      },
+      {
+        title: 'Observe and understand systems',
+        description: 'Use Grafana, InfluxDB, and Telegraf for open observability and time-series workflows, with Power BI as an applied analytics tool.',
+      },
+      {
+        title: 'Prototype new ideas',
+        description: 'Explore connected-system ideas with Raspberry Pi, microcontrollers, and prototype tooling such as Node-RED, Losant, and Apache NiFi.',
+      },
+    ],
+    motivationEyebrow: 'What motivates me',
+    motivationTitle: 'Useful technology, close to the work it supports.',
+    motivationBody: 'I am at my best when technology solves a real problem: supporting research, improving a technical workflow, reducing complexity, or making a system more dependable. I am seeking a return to applied technical work where thoughtful engineering and practical problem solving matter more than organizational hierarchy.',
+    motivationNote: 'The best systems are not only capable. They are inspectable, explainable, and maintainable by the people responsible for them.',
+    contactEyebrow: 'Start a conversation',
+    contactTitle: 'Let’s discuss useful technical work.',
+    contactBody: 'I welcome conversations about meaningful remote technical employment and consulting mandates involving infrastructure, platforms, automation, integration, reliability, or IoT.',
+    contactPlaceholder: 'Contact details coming soon',
+    contactNote: 'Patrick will add and approve direct contact information before publication.',
+  },
+  fr: {
+    role: 'Spécialiste principal en infrastructures numériques',
+    name: 'Patrick Paul',
+    practice: 'Praticien Linux, DevOps et IoT',
+    headline: 'Des infrastructures pratiques pour les milieux connectés, automatisés et axés sur la recherche.',
+    introduction: 'Je conçois et améliore des systèmes numériques qui permettent aux équipes techniques de travailler avec plus de fiabilité, de clarté et de confiance.',
+    primaryCta: 'Discuter d’une possibilité',
+    secondaryCta: 'Explorer mon travail',
+    portraitLabel: 'Zone réservée au portrait professionnel de Patrick Paul',
+    portraitTitle: 'Portrait professionnel',
+    portraitNote: 'À fournir et à approuver par Patrick',
+    valueEyebrow: 'Valeur professionnelle',
+    valueTitle: 'Des environnements complexes rendus fiables, compréhensibles et faciles à maintenir.',
+    valueBody: 'Depuis plus de 20 ans, je soutiens des milieux de recherche et des environnements techniques en améliorant l’infrastructure qui sous-tend leur travail. Je privilégie l’ingénierie pratique : résoudre des problèmes, intégrer des systèmes, automatiser les opérations et laisser des plateformes plus faciles à exploiter qu’à mon arrivée.',
+    years: 'ans d’expérience technique appliquée',
+    domains: ['Linux et conteneurs', 'Automatisation et intégration', 'Données et observabilité', 'IoT et systèmes de périphérie'],
+    capabilitiesEyebrow: 'Aperçu des capacités',
+    capabilitiesTitle: 'Cinq façons de faire progresser les environnements techniques.',
+    capabilitiesIntro: 'Chaque capacité repose sur une réalisation concrète, des normes ouvertes et des systèmes qui demeurent compréhensibles pour les personnes qui les exploitent.',
+    capabilities: [
+      {
+        title: 'Concevoir l’infrastructure numérique',
+        description: 'Créer des fondations Linux, conteneurs, données et périphérie faciles à maintenir et adaptées aux besoins opérationnels réels.',
+      },
+      {
+        title: 'Relier les systèmes existants',
+        description: 'Intégrer les plateformes établies et émergentes au moyen d’interfaces documentées, de protocoles ouverts et de parcours de migration pragmatiques.',
+      },
+      {
+        title: 'Automatiser les opérations',
+        description: 'Remplacer les étapes manuelles fragiles par des processus reproductibles qui améliorent la fiabilité et réduisent la charge opérationnelle.',
+      },
+      {
+        title: 'Observer et comprendre les systèmes',
+        description: 'Utiliser Grafana, InfluxDB et Telegraf pour l’observabilité ouverte et les séries chronologiques, ainsi que Power BI comme outil d’analyse appliquée.',
+      },
+      {
+        title: 'Prototyper de nouvelles idées',
+        description: 'Explorer des systèmes connectés avec Raspberry Pi, des microcontrôleurs et des outils de prototypage comme Node-RED, Losant et Apache NiFi.',
+      },
+    ],
+    motivationEyebrow: 'Ce qui me motive',
+    motivationTitle: 'Une technologie utile, proche du travail qu’elle soutient.',
+    motivationBody: 'Je donne le meilleur de moi-même lorsque la technologie résout un vrai problème : soutenir la recherche, améliorer un processus technique, réduire la complexité ou rendre un système plus fiable. Je souhaite revenir à un travail technique appliqué où l’ingénierie réfléchie et la résolution concrète de problèmes comptent davantage que la hiérarchie organisationnelle.',
+    motivationNote: 'Les meilleurs systèmes ne sont pas seulement performants. Ils peuvent être inspectés, expliqués et entretenus par les personnes qui en sont responsables.',
+    contactEyebrow: 'Amorcer une discussion',
+    contactTitle: 'Parlons d’un travail technique utile.',
+    contactBody: 'Je souhaite échanger au sujet d’un emploi technique stimulant à distance ou d’un mandat de consultation en infrastructure, plateformes, automatisation, intégration, fiabilité ou IoT.',
+    contactPlaceholder: 'Coordonnées à venir',
+    contactNote: 'Patrick ajoutera et approuvera ses coordonnées directes avant la publication.',
+  },
+} as const;
+
+const t = content[lang];
+---
+
+<main id="main-content" class="landing-page">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <p class="eyebrow">{t.role}</p>
+      <h1 id="hero-title">{t.name}</h1>
+      <p class="practice">{t.practice}</p>
+      <p class="hero-statement">{t.headline}</p>
+      <p class="lead">{t.introduction}</p>
+      <div class="actions">
+        <a class="button primary" href="#contact">{t.primaryCta}</a>
+        <a class="button" href="#capabilities">{t.secondaryCta}</a>
+      </div>
+    </div>
+
+    <aside class="portrait-card" aria-label={t.portraitLabel}>
+      <svg viewBox="0 0 360 450" role="presentation" aria-hidden="true" focusable="false">
+        <defs>
+          <linearGradient id={`portrait-gradient-${lang}`} x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#2ea8ff" stop-opacity="0.34" />
+            <stop offset="1" stop-color="#0d1b2d" stop-opacity="0.08" />
+          </linearGradient>
+        </defs>
+        <rect x="1" y="1" width="358" height="448" rx="28" fill={`url(#portrait-gradient-${lang})`} stroke="#6ec6ff" stroke-opacity="0.45" />
+        <path d="M30 90H150L190 130H330M30 150H95L130 185H330M30 315H135L170 280H330M30 375H180L215 340H330" fill="none" stroke="#6ec6ff" stroke-opacity="0.3" stroke-width="2" />
+        <g fill="#6ec6ff" fill-opacity="0.7">
+          <circle cx="30" cy="90" r="5" /><circle cx="330" cy="130" r="5" />
+          <circle cx="30" cy="150" r="5" /><circle cx="330" cy="185" r="5" />
+          <circle cx="30" cy="315" r="5" /><circle cx="330" cy="280" r="5" />
+          <circle cx="30" cy="375" r="5" /><circle cx="330" cy="340" r="5" />
+        </g>
+        <circle cx="180" cy="194" r="54" fill="none" stroke="#e8eef6" stroke-opacity="0.42" stroke-width="2" />
+        <path d="M92 361c12-67 46-100 88-100s76 33 88 100" fill="none" stroke="#e8eef6" stroke-opacity="0.42" stroke-width="2" />
+      </svg>
+      <div class="portrait-copy">
+        <strong>{t.portraitTitle}</strong>
+        <span>{t.portraitNote}</span>
+      </div>
+    </aside>
+  </section>
+
+  <section class="value-section" aria-labelledby="value-title">
+    <div class="section-heading">
+      <p class="eyebrow">{t.valueEyebrow}</p>
+      <h2 id="value-title">{t.valueTitle}</h2>
+    </div>
+    <div class="value-grid">
+      <div class="experience-marker" aria-label={`20+ ${t.years}`}>
+        <strong aria-hidden="true">20+</strong>
+        <span>{t.years}</span>
+      </div>
+      <div>
+        <p class="section-copy">{t.valueBody}</p>
+        <ul class="domain-list">
+          {t.domains.map((domain) => <li>{domain}</li>)}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="capabilities" class="capabilities-section" aria-labelledby="capabilities-title">
+    <div class="section-heading narrow">
+      <p class="eyebrow">{t.capabilitiesEyebrow}</p>
+      <h2 id="capabilities-title">{t.capabilitiesTitle}</h2>
+      <p class="section-copy">{t.capabilitiesIntro}</p>
+    </div>
+    <div class="capability-grid">
+      {t.capabilities.map((capability, index) => (
+        <article class="capability-card">
+          <span class="capability-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+          <h3>{capability.title}</h3>
+          <p>{capability.description}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="motivation-section" aria-labelledby="motivation-title">
+    <div>
+      <p class="eyebrow">{t.motivationEyebrow}</p>
+      <h2 id="motivation-title">{t.motivationTitle}</h2>
+    </div>
+    <div>
+      <p class="section-copy">{t.motivationBody}</p>
+      <blockquote>{t.motivationNote}</blockquote>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section" aria-labelledby="contact-title">
+    <div>
+      <p class="eyebrow">{t.contactEyebrow}</p>
+      <h2 id="contact-title">{t.contactTitle}</h2>
+      <p class="section-copy">{t.contactBody}</p>
+    </div>
+    <div class="contact-action">
+      <span class="button primary pending" aria-disabled="true">{t.contactPlaceholder}</span>
+      <p>{t.contactNote}</p>
+    </div>
+  </section>
+</main>
+
+<style>
+  .landing-page { position: relative; }
+  .landing-page::before { content: ''; position: absolute; inset: 3rem -10vw auto; height: 34rem; z-index: -1; pointer-events: none; background: radial-gradient(circle at 80% 35%, rgb(46 168 255 / 14%), transparent 42%), repeating-linear-gradient(115deg, transparent 0 26px, rgb(110 198 255 / 3%) 27px 28px); mask-image: linear-gradient(to bottom, black, transparent); }
+  .hero { min-height: calc(100vh - 5rem); display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(16rem, .7fr); gap: clamp(3rem, 8vw, 7rem); align-items: center; padding-block: clamp(4rem, 9vw, 8rem); }
+  .hero-copy { min-width: 0; }
+  .hero h1 { max-width: none; margin-block: .35rem .25rem; font-size: clamp(3.7rem, 9vw, 7.5rem); letter-spacing: -.06em; }
+  .practice { margin: 0; color: var(--accent-soft); font-size: clamp(1.1rem, 2vw, 1.4rem); font-weight: 700; }
+  .hero-statement { max-width: 20ch; margin-block: 2.2rem 1rem; font-size: clamp(1.65rem, 3.2vw, 2.7rem); font-weight: 700; line-height: 1.18; letter-spacing: -.025em; }
+  .portrait-card { position: relative; width: min(100%, 23rem); justify-self: end; aspect-ratio: 4 / 5; border-radius: 1.75rem; overflow: hidden; background: linear-gradient(145deg, rgb(18 54 90 / 72%), rgb(7 17 31 / 92%)); box-shadow: 0 2rem 5rem rgb(0 0 0 / 28%); }
+  .portrait-card svg { width: 100%; height: 100%; }
+  .portrait-copy { position: absolute; inset: auto 1.5rem 1.5rem; display: grid; gap: .2rem; padding: 1rem; border: 1px solid rgb(110 198 255 / 26%); border-radius: .8rem; background: rgb(7 17 31 / 82%); backdrop-filter: blur(8px); }
+  .portrait-copy span { color: var(--muted); font-size: .82rem; }
+  .value-section, .capabilities-section, .motivation-section { padding-block: clamp(5rem, 10vw, 8rem); border-top: 1px solid var(--border); }
+  .section-heading { display: grid; grid-template-columns: minmax(10rem, .45fr) minmax(0, 1fr); gap: 2rem 4rem; align-items: start; margin-bottom: 3.5rem; }
+  .section-heading.narrow { grid-template-columns: 1fr; max-width: 48rem; gap: .7rem; }
+  .section-heading h2, .motivation-section h2, .contact-section h2 { margin: 0; max-width: 20ch; font-size: clamp(2rem, 4vw, 3.6rem); line-height: 1.12; letter-spacing: -.035em; }
+  .value-grid { display: grid; grid-template-columns: minmax(13rem, .45fr) minmax(0, 1fr); gap: 3rem 4rem; }
+  .experience-marker { display: grid; align-content: start; }
+  .experience-marker strong { color: var(--accent-soft); font-size: clamp(4.5rem, 10vw, 7rem); line-height: .9; letter-spacing: -.07em; }
+  .experience-marker span { max-width: 15ch; margin-top: .8rem; color: var(--muted); font-weight: 700; }
+  .section-copy { max-width: 66ch; margin-top: 0; color: var(--muted); font-size: clamp(1.05rem, 1.7vw, 1.22rem); }
+  .domain-list { display: flex; flex-wrap: wrap; gap: .65rem; margin: 2rem 0 0; padding: 0; list-style: none; }
+  .domain-list li { padding: .55rem .8rem; border: 1px solid var(--border); border-radius: 999px; background: rgb(13 27 45 / 72%); font-size: .9rem; }
+  .capability-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1rem; }
+  .capability-card { position: relative; grid-column: span 2; min-height: 17rem; padding: 1.5rem; border: 1px solid var(--border); border-radius: 1rem; overflow: hidden; background: linear-gradient(145deg, rgb(18 36 58 / 82%), rgb(9 22 38 / 92%)); }
+  .capability-card:nth-child(4) { grid-column: 2 / span 2; }
+  .capability-card::after { content: ''; position: absolute; right: -2rem; bottom: -2rem; width: 8rem; aspect-ratio: 1; border: 1px solid rgb(110 198 255 / 16%); border-radius: 50%; box-shadow: 0 0 0 1.4rem rgb(110 198 255 / 4%), 0 0 0 2.8rem rgb(110 198 255 / 3%); }
+  .capability-number { color: var(--accent-soft); font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: .84rem; }
+  .capability-card h3 { max-width: 17ch; margin-block: 2.6rem .8rem; font-size: 1.35rem; line-height: 1.25; }
+  .capability-card p { position: relative; z-index: 1; margin: 0; color: var(--muted); }
+  .motivation-section { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 3rem 6rem; }
+  blockquote { margin: 2.25rem 0 0; padding: .35rem 0 .35rem 1.5rem; border-left: 3px solid var(--accent); color: var(--text); font-size: 1.1rem; }
+  .contact-section { display: grid; grid-template-columns: minmax(0, 1fr) minmax(16rem, .55fr); gap: 3rem 6rem; align-items: end; margin-bottom: clamp(5rem, 10vw, 8rem); padding: clamp(2rem, 6vw, 4rem); border: 1px solid rgb(110 198 255 / 28%); border-radius: 1.5rem; background: radial-gradient(circle at 100% 0, rgb(46 168 255 / 18%), transparent 42%), var(--surface); }
+  .contact-action { display: grid; gap: 1rem; justify-items: start; }
+  .contact-action p { margin: 0; color: var(--muted); font-size: .86rem; }
+  .button.pending { cursor: not-allowed; filter: saturate(.45); opacity: .82; }
+  @media (max-width: 860px) {
+    .hero { grid-template-columns: 1fr; }
+    .portrait-card { width: min(100%, 20rem); justify-self: start; }
+    .section-heading, .value-grid, .motivation-section, .contact-section { grid-template-columns: 1fr; }
+    .capability-grid { grid-template-columns: repeat(2, 1fr); }
+    .capability-card, .capability-card:nth-child(4) { grid-column: auto; }
+    .capability-card:last-child { grid-column: 1 / -1; }
+  }
+  @media (max-width: 520px) {
+    .hero { min-height: auto; }
+    .hero h1 { font-size: clamp(3.3rem, 18vw, 4.7rem); overflow-wrap: anywhere; }
+    .hero-statement { font-size: clamp(1.45rem, 8vw, 2rem); }
+    .portrait-card { width: 100%; }
+    .capability-grid { grid-template-columns: 1fr; }
+    .capability-card, .capability-card:nth-child(4), .capability-card:last-child { grid-column: auto; min-height: auto; }
+    .contact-section { padding: 1.5rem; }
+  }
+</style>
