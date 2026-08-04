@@ -16,6 +16,8 @@ const disclosure = lang === 'en'
   ? 'Generative AI was used as an engineering and writing assistant in the production of this website. All published content and technical decisions were reviewed and approved by Patrick Paul.'
   : 'L’IA générative a servi d’assistante à l’ingénierie et à la rédaction de ce site Web. Patrick Paul a révisé et approuvé l’ensemble du contenu publié et des décisions techniques.';
 const transparencyLabel = lang === 'en' ? 'AI transparency' : 'Transparence sur l’IA';
+const skipLabel = lang === 'en' ? 'Skip to main content' : 'Aller au contenu principal';
+const languageNavLabel = lang === 'en' ? 'Language selection' : 'Choix de la langue';
 ---
 <!doctype html>
 <html lang={lang}>
@@ -27,8 +29,14 @@ const transparencyLabel = lang === 'en' ? 'AI transparency' : 'Transparence sur 
     <title>{title}</title>
   </head>
   <body>
+    <a class="skip-link" href="#main-content">{skipLabel}</a>
     <header class="site-header">
-      <a href={`${base}${alternateLang}/`} hreflang={alternateLang} data-language={alternateLang}>{alternateLabel}</a>
+      <div class="header-inner">
+        <a class="site-name" href={`${base}${lang}/`}>Patrick Paul</a>
+        <nav aria-label={languageNavLabel}>
+          <a class="language-link" href={`${base}${alternateLang}/`} hreflang={alternateLang} data-language={alternateLang}>{alternateLabel}</a>
+        </nav>
+      </div>
     </header>
     <slot />
     <footer>
@@ -55,6 +63,11 @@ const transparencyLabel = lang === 'en' ? 'AI transparency' : 'Transparence sur 
 </html>
 
 <style>
-  .site-header { width: min(1120px, calc(100% - 2rem)); margin-inline: auto; padding-top: 1.25rem; display: flex; justify-content: flex-end; }
-  .site-header a { min-height: 44px; display: inline-flex; align-items: center; padding-inline: .75rem; }
+  .skip-link { position: fixed; top: .75rem; left: .75rem; z-index: 20; padding: .7rem 1rem; border-radius: .5rem; background: var(--text); color: var(--background); font-weight: 800; transform: translateY(-180%); }
+  .skip-link:focus { transform: translateY(0); }
+  .site-header { width: min(1180px, calc(100% - 2rem)); margin-inline: auto; padding-top: 1.25rem; }
+  .header-inner { min-height: 3.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; border-bottom: 1px solid var(--border); }
+  .site-name, .language-link { min-height: 44px; display: inline-flex; align-items: center; text-decoration: none; }
+  .site-name { color: var(--text); font-weight: 800; letter-spacing: -.02em; }
+  .language-link { padding-inline: .75rem; }
 </style>

@@ -1,9 +1,9 @@
 # Project Status
 
-Milestone 0 foundation is implemented on the `milestone-0-foundation` branch.
+Milestone 0 is complete and merged into `main`.
 
-The branch contains the Astro foundation, bilingual routes, accessible dark-theme styling, GitHub Pages workflow, AI transparency material, and engineering documentation.
+Milestone 1 is implemented on the `feature/landing-page` branch and is ready for human review. It adds the complete bilingual landing page, professional positioning, capability preview, motivation and contact sections, a reserved portrait area, and the responsive technical visual system.
 
-Local validation is complete: `npm ci`, `npm run check`, and `npm run build` succeed, and the generated routes and internal links work under the `/portfolio/` base path.
+Local validation is complete: `npm ci`, `npm run check`, and `npm run build` succeed, and the generated routes and internal links work under the `/portfolio/` base path across the required responsive layouts.
 
-Deployment remains pending human approval and merge to `main`.
+Publication remains pending Patrick’s approval of the content, professional portrait, and direct contact information.
