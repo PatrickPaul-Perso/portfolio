@@ -6,7 +6,7 @@ The portfolio should communicate within seconds that Patrick Paul builds reliabl
 
 - Technical recruiters
 - DevOps, SRE, and platform managers
-- Research and scientific technology organizations
+- Organizations delivering operational platforms, R&D initiatives, proofs of concept, and technology demonstrations
 
 ## Content priorities
 

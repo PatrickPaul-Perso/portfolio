@@ -1,0 +1,36 @@
+---
+interface Props {
+  lang: 'en' | 'fr';
+}
+
+const { lang } = Astro.props;
+
+const content = {
+  en: {
+    eyebrow: 'AI transparency',
+    title: 'Generative AI assisted the process. Human judgment remained accountable.',
+    usage: 'Generative AI was used to accelerate ideation, writing, translation, documentation, software development, accessibility review, and design exploration.',
+    responsibility: 'All published content, factual claims, technical decisions, and source code were reviewed and approved by Patrick Paul before publication.',
+    returnLabel: 'Return to portfolio',
+  },
+  fr: {
+    eyebrow: 'Transparence sur l’IA',
+    title: 'L’IA générative a soutenu le processus. La responsabilité est demeurée humaine.',
+    usage: 'L’IA générative a servi à accélérer l’idéation, la rédaction, la traduction, la documentation, le développement logiciel, l’examen de l’accessibilité et l’exploration visuelle.',
+    responsibility: 'Patrick Paul a révisé et approuvé l’ensemble du contenu publié, des affirmations factuelles, des décisions techniques et du code source avant la publication.',
+    returnLabel: 'Retour au portfolio',
+  },
+} as const;
+
+const t = content[lang];
+---
+
+<main id="main-content">
+  <section class="hero" aria-labelledby="title">
+    <p class="eyebrow">{t.eyebrow}</p>
+    <h1 id="title">{t.title}</h1>
+    <p class="lead">{t.usage}</p>
+    <p class="lead">{t.responsibility}</p>
+    <p><a class="button" href={`../`}>{t.returnLabel}</a></p>
+  </section>
+</main>

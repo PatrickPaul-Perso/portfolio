@@ -1,4 +1,6 @@
 ---
+import ProfessionalLinks from './ProfessionalLinks.astro';
+
 interface Props {
   lang: 'en' | 'fr';
 }
@@ -10,16 +12,14 @@ const content = {
     role: 'Senior Digital Infrastructure Specialist',
     name: 'Patrick Paul',
     practice: 'Linux, DevOps and IoT Practitioner',
-    headline: 'Practical infrastructure for connected, automated, and research-driven environments.',
+    headline: 'Reliable digital infrastructure for operations, automation, and applied innovation.',
     introduction: 'I build and improve digital systems that help technical teams work with greater reliability, clarity, and confidence.',
-    primaryCta: 'Discuss an opportunity',
-    secondaryCta: 'Explore my work',
-    portraitLabel: 'Reserved area for Patrick Paul’s professional portrait',
-    portraitTitle: 'Professional portrait',
-    portraitNote: 'To be provided and approved by Patrick',
+    primaryCta: 'Contact me',
+    secondaryCta: 'Explore my capabilities',
+    portraitAlt: 'Professional portrait of Patrick Paul',
     valueEyebrow: 'Professional value',
     valueTitle: 'Complex environments made reliable, understandable, and maintainable.',
-    valueBody: 'For more than 20 years, I have supported research and technical environments by improving the infrastructure beneath the work. My focus is hands-on engineering: solving problems, integrating systems, automating operations, and leaving platforms easier to operate than I found them.',
+    valueBody: 'For more than 20 years, I have improved the infrastructure behind operational environments, R&D initiatives, proof-of-concept platforms, and technology demonstrations. My focus is hands-on engineering: solving practical problems, integrating systems, automating operations, and building reliable platforms that are easier to operate.',
     years: 'years of applied technical experience',
     domains: ['Linux and containers', 'Automation and integration', 'Data and observability', 'IoT and edge systems'],
     capabilitiesEyebrow: 'Capability preview',
@@ -49,28 +49,26 @@ const content = {
     ],
     motivationEyebrow: 'What motivates me',
     motivationTitle: 'Useful technology, close to the work it supports.',
-    motivationBody: 'I am at my best when technology solves a real problem: supporting research, improving a technical workflow, reducing complexity, or making a system more dependable. I am seeking a return to applied technical work where thoughtful engineering, practical problem solving, and direct contribution are central to the role.',
+    motivationBody: 'I am motivated by hands-on engineering that solves real problems: improving operations, automating workflows, advancing R&D initiatives, validating proof-of-concept platforms, and building reliable digital infrastructure.',
     motivationNote: 'The best systems are not only capable. They are inspectable, explainable, and maintainable by the people responsible for them.',
     contactEyebrow: 'Start a conversation',
     contactTitle: 'Let’s discuss useful technical work.',
-    contactBody: 'I welcome conversations about meaningful remote technical employment and consulting mandates involving infrastructure, platforms, automation, integration, reliability, or IoT.',
-    contactPlaceholder: 'Contact details coming soon',
-    contactNote: 'Patrick will add and approve direct contact information before publication.',
+    contactBody: 'Contact me about remote technical positions or consulting mandates involving infrastructure, Linux, DevOps, automation, integration, reliability, or IoT.',
+    contactLinksLabel: 'Contact Patrick Paul',
+    contactNote: 'Available for remote technical positions and consulting mandates.',
   },
   fr: {
     role: 'Spécialiste principal en infrastructures numériques',
     name: 'Patrick Paul',
     practice: 'Spécialiste Linux, DevOps et IoT',
-    headline: 'Des infrastructures pratiques pour les milieux connectés, automatisés et axés sur la recherche.',
+    headline: 'Des infrastructures numériques fiables pour les opérations, l’automatisation et l’innovation appliquée.',
     introduction: 'Je conçois et améliore des systèmes numériques qui permettent aux équipes techniques de travailler avec plus de fiabilité, de clarté et de confiance.',
-    primaryCta: 'Discuter d’une occasion professionnelle',
-    secondaryCta: 'Explorer mon travail',
-    portraitLabel: 'Zone réservée au portrait professionnel de Patrick Paul',
-    portraitTitle: 'Portrait professionnel',
-    portraitNote: 'À fournir et à approuver par Patrick',
+    primaryCta: 'Me joindre',
+    secondaryCta: 'Explorer mes capacités',
+    portraitAlt: 'Portrait professionnel de Patrick Paul',
     valueEyebrow: 'Valeur professionnelle',
     valueTitle: 'Des environnements complexes rendus fiables, compréhensibles et faciles à maintenir.',
-    valueBody: 'Depuis plus de 20 ans, je soutiens des milieux de recherche et des environnements techniques en améliorant l’infrastructure qui sous-tend leur travail. Je privilégie l’ingénierie pratique : résoudre des problèmes, intégrer des systèmes, automatiser les opérations et laisser des plateformes plus faciles à exploiter qu’à mon arrivée.',
+    valueBody: 'Depuis plus de 20 ans, j’améliore l’infrastructure qui soutient des environnements opérationnels, des initiatives de R-D, des plateformes de validation de principe et des démonstrations technologiques. Je privilégie l’ingénierie pratique : résoudre des problèmes concrets, intégrer des systèmes, automatiser les opérations et bâtir des plateformes fiables et plus faciles à exploiter.',
     years: 'ans d’expérience technique appliquée',
     domains: ['Linux et conteneurs', 'Automatisation et intégration', 'Données et observabilité', 'IoT et systèmes en périphérie'],
     capabilitiesEyebrow: 'Aperçu des capacités',
@@ -100,17 +98,20 @@ const content = {
     ],
     motivationEyebrow: 'Ce qui me motive',
     motivationTitle: 'Une technologie utile, proche du travail qu’elle soutient.',
-    motivationBody: 'Je donne le meilleur de moi-même lorsque la technologie résout un vrai problème : soutenir la recherche, améliorer un processus technique, réduire la complexité ou rendre un système plus fiable. Je souhaite revenir à un travail technique appliqué où l’ingénierie réfléchie, la résolution concrète de problèmes et la contribution directe occupent une place centrale.',
+    motivationBody: 'Je suis motivé par une ingénierie pratique qui résout des problèmes concrets : améliorer les opérations, automatiser les processus, faire progresser des initiatives de R-D, réaliser des validations de principe et bâtir des infrastructures numériques fiables.',
     motivationNote: 'Les meilleurs systèmes ne sont pas seulement performants. Ils peuvent être inspectés, expliqués et entretenus par les personnes qui en sont responsables.',
     contactEyebrow: 'Amorcer une discussion',
     contactTitle: 'Parlons d’un travail technique utile.',
-    contactBody: 'Je souhaite échanger au sujet d’un emploi technique stimulant à distance ou d’un mandat de consultation en infrastructure, plateformes, automatisation, intégration, fiabilité ou IoT.',
-    contactPlaceholder: 'Coordonnées à venir',
-    contactNote: 'Patrick ajoutera et approuvera ses coordonnées directes avant la publication.',
+    contactBody: 'Communiquez avec moi au sujet d’un poste technique à distance ou d’un mandat de consultation en infrastructure, Linux, DevOps, automatisation, intégration, fiabilité ou IoT.',
+    contactLinksLabel: 'Communiquer avec Patrick Paul',
+    contactNote: 'Disponible pour des postes techniques à distance et des mandats de consultation.',
   },
 } as const;
 
 const t = content[lang];
+const baseUrl = import.meta.env.BASE_URL;
+const base = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
+const portraitSrc = `${base}images/patrick-paul-professional-portrait.webp`;
 ---
 
 <main id="main-content" class="landing-page">
@@ -127,30 +128,17 @@ const t = content[lang];
       </div>
     </div>
 
-    <aside class="portrait-card" aria-label={t.portraitLabel}>
-      <svg viewBox="0 0 360 450" role="presentation" aria-hidden="true" focusable="false">
-        <defs>
-          <linearGradient id={`portrait-gradient-${lang}`} x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#2ea8ff" stop-opacity="0.34" />
-            <stop offset="1" stop-color="#0d1b2d" stop-opacity="0.08" />
-          </linearGradient>
-        </defs>
-        <rect x="1" y="1" width="358" height="448" rx="28" fill={`url(#portrait-gradient-${lang})`} stroke="#6ec6ff" stroke-opacity="0.45" />
-        <path d="M30 90H150L190 130H330M30 150H95L130 185H330M30 315H135L170 280H330M30 375H180L215 340H330" fill="none" stroke="#6ec6ff" stroke-opacity="0.3" stroke-width="2" />
-        <g fill="#6ec6ff" fill-opacity="0.7">
-          <circle cx="30" cy="90" r="5" /><circle cx="330" cy="130" r="5" />
-          <circle cx="30" cy="150" r="5" /><circle cx="330" cy="185" r="5" />
-          <circle cx="30" cy="315" r="5" /><circle cx="330" cy="280" r="5" />
-          <circle cx="30" cy="375" r="5" /><circle cx="330" cy="340" r="5" />
-        </g>
-        <circle cx="180" cy="194" r="54" fill="none" stroke="#e8eef6" stroke-opacity="0.42" stroke-width="2" />
-        <path d="M92 361c12-67 46-100 88-100s76 33 88 100" fill="none" stroke="#e8eef6" stroke-opacity="0.42" stroke-width="2" />
-      </svg>
-      <div class="portrait-copy">
-        <strong>{t.portraitTitle}</strong>
-        <span>{t.portraitNote}</span>
-      </div>
-    </aside>
+    <figure class="portrait-card">
+      <img
+        src={portraitSrc}
+        alt={t.portraitAlt}
+        width="729"
+        height="911"
+        loading="eager"
+        decoding="async"
+        fetchpriority="high"
+      />
+    </figure>
   </section>
 
   <section class="value-section" aria-labelledby="value-title">
@@ -206,10 +194,10 @@ const t = content[lang];
       <h2 id="contact-title">{t.contactTitle}</h2>
       <p class="section-copy">{t.contactBody}</p>
     </div>
-    <div class="contact-action">
-      <span class="button primary pending" aria-disabled="true">{t.contactPlaceholder}</span>
+    <nav class="contact-action" aria-label={t.contactLinksLabel}>
+      <ProfessionalLinks lang={lang} />
       <p>{t.contactNote}</p>
-    </div>
+    </nav>
   </section>
 </main>
 
@@ -221,10 +209,8 @@ const t = content[lang];
   .hero h1 { max-width: none; margin-block: .35rem .25rem; font-size: clamp(3.7rem, 9vw, 7.5rem); letter-spacing: -.06em; }
   .practice { margin: 0; color: var(--accent-soft); font-size: clamp(1.1rem, 2vw, 1.4rem); font-weight: 700; }
   .hero-statement { max-width: 20ch; margin-block: 2.2rem 1rem; font-size: clamp(1.65rem, 3.2vw, 2.7rem); font-weight: 700; line-height: 1.18; letter-spacing: -.025em; }
-  .portrait-card { position: relative; width: min(100%, 23rem); justify-self: end; aspect-ratio: 4 / 5; border-radius: 1.75rem; overflow: hidden; background: linear-gradient(145deg, rgb(18 54 90 / 72%), rgb(7 17 31 / 92%)); box-shadow: 0 2rem 5rem rgb(0 0 0 / 28%); }
-  .portrait-card svg { width: 100%; height: 100%; }
-  .portrait-copy { position: absolute; inset: auto 1.5rem 1.5rem; display: grid; gap: .2rem; padding: 1rem; border: 1px solid rgb(110 198 255 / 26%); border-radius: .8rem; background: rgb(7 17 31 / 82%); backdrop-filter: blur(8px); }
-  .portrait-copy span { color: var(--muted); font-size: .82rem; }
+  .portrait-card { position: relative; width: min(100%, 23rem); justify-self: end; aspect-ratio: 729 / 911; margin: 0; border: 1px solid rgb(110 198 255 / 26%); border-radius: 1.75rem; overflow: hidden; background: var(--surface); box-shadow: 0 2rem 5rem rgb(0 0 0 / 28%); }
+  .portrait-card img { width: 100%; height: 100%; object-fit: cover; }
   .value-section, .capabilities-section, .motivation-section { padding-block: clamp(5rem, 10vw, 8rem); border-top: 1px solid var(--border); }
   .section-heading { display: grid; grid-template-columns: minmax(10rem, .45fr) minmax(0, 1fr); gap: 2rem 4rem; align-items: start; margin-bottom: 3.5rem; }
   .section-heading.narrow { grid-template-columns: 1fr; max-width: 48rem; gap: .7rem; }
@@ -248,7 +234,6 @@ const t = content[lang];
   .contact-section { display: grid; grid-template-columns: minmax(0, 1fr) minmax(16rem, .55fr); gap: 3rem 6rem; align-items: end; margin-bottom: clamp(5rem, 10vw, 8rem); padding: clamp(2rem, 6vw, 4rem); border: 1px solid rgb(110 198 255 / 28%); border-radius: 1.5rem; background: radial-gradient(circle at 100% 0, rgb(46 168 255 / 18%), transparent 42%), var(--surface); }
   .contact-action { display: grid; gap: 1rem; justify-items: start; }
   .contact-action p { margin: 0; color: var(--muted); font-size: .86rem; }
-  .button.pending { cursor: not-allowed; filter: saturate(.45); opacity: .82; }
   @media (max-width: 860px) {
     .hero { grid-template-columns: 1fr; }
     .portrait-card { width: min(100%, 20rem); justify-self: start; }
