@@ -9,6 +9,31 @@
 5. Use a concise Conventional Commit message.
 6. Open a pull request with a clear summary and validation notes.
 
+## Branch naming
+
+Use short, descriptive, English branch names with one of these prefixes:
+
+```text
+foundation/
+feature/
+fix/
+docs/
+refactor/
+chore/
+release/
+```
+
+Examples:
+
+```text
+foundation/milestone-0
+feature/homepage-hero
+fix/github-pages-routing
+docs/branch-conventions
+```
+
+Do not rename an active branch without a clear operational reason. Preserve existing pull request history when the current name is already understandable and compliant.
+
 ## Commit examples
 
 ```text
