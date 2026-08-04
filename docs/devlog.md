@@ -1,5 +1,9 @@
 # Development Log
 
+## 2026-08-04 — Approved professional portrait
+
+Patrick provided and approved a professional portrait for publication. The source image was converted to an optimized WebP asset without cropping or generative retouching, committed to the repository, and displayed on both localized landing pages with explicit dimensions and localized alternative text.
+
 ## 2026-08-04 — Forward-looking professional positioning
 
 The English and Canadian French landing-page copy now presents Patrick’s motivation for hands-on engineering, practical problem solving, automation, and building reliable digital infrastructure through positive, forward-looking language.
