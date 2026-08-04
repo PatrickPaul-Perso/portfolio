@@ -12,8 +12,8 @@ const content = {
     practice: 'Linux, DevOps and IoT Practitioner',
     headline: 'Practical infrastructure for connected, automated, and research-driven environments.',
     introduction: 'I build and improve digital systems that help technical teams work with greater reliability, clarity, and confidence.',
-    primaryCta: 'Discuss an opportunity',
-    secondaryCta: 'Explore my work',
+    primaryCta: 'Contact options coming soon',
+    secondaryCta: 'Explore my capabilities',
     portraitLabel: 'Reserved area for Patrick Paul’s professional portrait',
     portraitTitle: 'Professional portrait',
     portraitNote: 'To be provided and approved by Patrick',
@@ -63,8 +63,8 @@ const content = {
     practice: 'Spécialiste Linux, DevOps et IoT',
     headline: 'Des infrastructures pratiques pour les milieux connectés, automatisés et axés sur la recherche.',
     introduction: 'Je conçois et améliore des systèmes numériques qui permettent aux équipes techniques de travailler avec plus de fiabilité, de clarté et de confiance.',
-    primaryCta: 'Discuter d’une occasion professionnelle',
-    secondaryCta: 'Explorer mon travail',
+    primaryCta: 'Coordonnées à venir',
+    secondaryCta: 'Explorer mes capacités',
     portraitLabel: 'Zone réservée au portrait professionnel de Patrick Paul',
     portraitTitle: 'Portrait professionnel',
     portraitNote: 'À fournir et à approuver par Patrick',
@@ -122,7 +122,7 @@ const t = content[lang];
       <p class="hero-statement">{t.headline}</p>
       <p class="lead">{t.introduction}</p>
       <div class="actions">
-        <a class="button primary" href="#contact">{t.primaryCta}</a>
+        <span class="button primary pending" aria-disabled="true">{t.primaryCta}</span>
         <a class="button" href="#capabilities">{t.secondaryCta}</a>
       </div>
     </div>
