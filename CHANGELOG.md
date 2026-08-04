@@ -16,3 +16,6 @@ All notable changes to this project will be documented in this file.
 - Definition of ready and definition of done.
 - English branch naming conventions.
 - Repository goals and milestone roadmap.
+- Complete bilingual landing page with professional positioning, value summary, capability preview, motivation, and contact sections.
+- Reserved professional-photo and contact areas for later human completion.
+- Responsive infrastructure-inspired visual system and skip navigation.

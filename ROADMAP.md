@@ -4,7 +4,7 @@ The roadmap is intentionally incremental. Each milestone should leave the site f
 
 ## Milestone 0 — Foundation
 
-Status: complete, pending merge.
+Status: complete.
 
 - Astro and TypeScript foundation
 - GitHub Pages deployment
@@ -15,11 +15,15 @@ Status: complete, pending merge.
 
 ## Milestone 1 — Landing page
 
-- professional hero section
-- professional photo
-- concise positioning and calls to action
-- subtle infrastructure-inspired visual system
-- desktop and mobile validation
+Status: complete, pending human review.
+
+- bilingual professional identity and calls to action
+- professional value and motivation sections
+- five-capability preview
+- remote employment and consulting contact preview
+- reserved professional-photo and contact areas
+- infrastructure-inspired responsive visual system
+- accessibility, routing, and responsive validation
 
 ## Milestone 2 — Capabilities
 
