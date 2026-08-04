@@ -14,10 +14,23 @@ ChatGPT is the primary generative AI assistant used for this project. Do not add
 - Prefer maintainability over novelty.
 - Prefer accessibility over visual effects.
 - Prefer static generation whenever possible.
-- Avoid unnecessary dependencies.
+- Prefer open-source technologies, open standards, and portable architectures when they satisfy the requirement.
+- Avoid unnecessary dependencies and vendor lock-in.
 - Keep the site fast on desktop and mobile.
 - Keep documentation in English.
 - Keep English and French site content synchronized.
+
+## Open-source perspective
+
+The portfolio should consistently reflect practical experience with open and interoperable platforms.
+
+- Present open-source tools as the preferred foundation when they are reliable and appropriate.
+- Favour solutions that can be self-hosted, inspected, automated, and migrated.
+- Emphasize interoperability, documented interfaces, and standard protocols.
+- Do not hide relevant proprietary-platform experience, but describe it in context rather than making it the centre of the technical identity.
+- When discussing data visualization and telemetry, include experience with Grafana, InfluxDB, and Telegraf alongside Power BI.
+- Describe Node-RED, Losant, and Apache NiFi accurately as tools used in prototype or experimental work unless stronger production evidence is provided.
+- Avoid overstating proficiency, production scale, or operational responsibility.
 
 ## Change discipline
 
