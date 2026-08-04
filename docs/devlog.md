@@ -1,5 +1,11 @@
 # Development Log
 
+## 2026-08-04 — Approved public contact information
+
+Patrick approved publication of his professional email, LinkedIn profile, and GitHub profile. The temporary contact actions were replaced with accessible links, and the bilingual contact section now invites inquiries about remote technical positions and consulting mandates.
+
+The shared footer now presents a concise localized professional profile with Patrick’s role, Linux, DevOps, and IoT focus, Gatineau location, availability, and approved contact links. The existing generative AI disclosure wording and localized transparency links remain unchanged.
+
 ## 2026-08-04 — Dependency health and engineering workflow
 
 The post-merge Milestone 1 correction now includes a documented dependency-health assessment and a repeatable pull request quality standard. The audit found no safe patch or compatible minor dependency updates: the remaining Astro, sharp, and esbuild advisories require a framework-major migration and are deferred for a focused, human-approved change.

@@ -17,13 +17,16 @@ All notable changes to this project will be documented in this file.
 - English branch naming conventions.
 - Repository goals and milestone roadmap.
 - Complete bilingual landing page with professional positioning, value summary, capability preview, motivation, and contact sections.
-- Reserved professional-photo and contact areas for later human completion.
+- Reserved professional-photo area for later human completion.
 - Responsive infrastructure-inspired visual system and skip navigation.
 - Dependency-health documentation with explicit vulnerability classification and remediation strategy.
+- Approved public email, LinkedIn, and GitHub contact links.
+- Localized professional footer with location and availability details.
 
 ### Changed
 
 - Standardized pull request engineering-health reporting and continuous-improvement guidance in `AGENTS.md`.
+- Replaced temporary contact actions with approved, accessible contact links for remote technical positions and consulting mandates.
 
 ### Fixed
 
