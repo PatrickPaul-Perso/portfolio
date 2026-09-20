@@ -1,5 +1,11 @@
 # Development Log
 
+## 2026-09-20 — Dedicated About and contact page
+
+The portfolio now provides synchronized English and Canadian French About pages. They bring Patrick’s working approach, applied technical interests, preferred opportunities, location, availability, email address, LinkedIn profile, and GitHub profile into one focused destination.
+
+The landing-page contact actions and the shared footer now link to this page instead of repeating contact information. The shared header provides localized Home and About navigation while preserving the existing language switcher and stored-language behaviour.
+
 ## 2026-09-20 — SME services, feasibility, and data sovereignty
 
 The bilingual landing page now addresses small and mid-sized organizations that need either an experienced hands-on technical contributor or a focused mandate delivered independently. The revised content presents feasibility assessments and prototypes as a distinct engagement path before larger implementation investments.

@@ -26,6 +26,7 @@ All notable changes to this project will be documented in this file.
 - Data-sovereignty section illustrating local, edge, hybrid, and optional cloud data flows.
 - Technical depth and applied-exploration sections covering industrial IoT, EdgeX Foundry, MQTT, home automation, 3D printing, and evaluated prototype tools.
 - Site-specific SVG favicon.
+- Dedicated bilingual About page with prominently positioned professional contact information.
 
 ### Changed
 
@@ -35,6 +36,7 @@ All notable changes to this project will be documented in this file.
 - Clarified and aligned language routing so the site follows the client’s browser preference on a first visit, preserves explicit user selections, and falls back to English for unsupported preferences.
 - Positioned Node-RED, Losant, and Apache NiFi accurately as technologies evaluated through prototype and exploratory work.
 - Updated compatible transitive dependencies to remediate five audit findings; documented the remaining Astro-major migration requirement.
+- Replaced repeated contact details on the landing page and footer with clear links to the dedicated About page.
 
 ### Fixed
 

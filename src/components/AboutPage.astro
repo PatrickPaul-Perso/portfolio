@@ -1,0 +1,113 @@
+---
+import ProfessionalLinks from './ProfessionalLinks.astro';
+import { publicProfile } from '../data/publicProfile';
+
+interface Props { lang: 'en' | 'fr'; }
+const { lang } = Astro.props;
+const baseUrl = import.meta.env.BASE_URL;
+const base = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
+const portraitSrc = `${base}images/patrick-paul-professional-portrait.webp`;
+
+const content = {
+  en: {
+    eyebrow: 'About me',
+    title: 'A hands-on technical contributor who connects infrastructure, data, and real operations.',
+    intro: 'I am Patrick Paul, a senior technical infrastructure specialist based in Gatineau, Québec. For more than 20 years, I have helped research and operational teams build, stabilize, automate, and evolve the systems behind their work.',
+    portraitAlt: 'Professional portrait of Patrick Paul',
+    approachEyebrow: 'Working approach',
+    approachTitle: 'How I work',
+    approach: [
+      'I am most useful where a challenge crosses traditional boundaries: Linux infrastructure, automation, data flows, connected equipment, monitoring, and practical integration.',
+      'I favour open standards, maintainable designs, clear documentation, and solutions that preserve the organization’s control over its infrastructure, data, and intellectual property.',
+      'I can contribute as an experienced member of a technical team or independently deliver a well-defined assessment, prototype, implementation, and operational handoff.',
+    ],
+    interestsEyebrow: 'Beyond infrastructure',
+    interestsTitle: 'Applied interests',
+    interestsBody: 'Industrial IoT, edge processing, home automation, microcontrollers, 3D printing, and digital fabrication keep my technical practice grounded in real devices, physical constraints, and measurable outcomes.',
+    lookingEyebrow: 'Good fit',
+    lookingTitle: 'What I am looking for',
+    lookingItems: ['Hands-on remote technical roles', 'Linux, infrastructure, DevOps, SRE, research computing, or IoT work', 'Focused feasibility, prototype, automation, and integration mandates', 'Work with limited management responsibilities and clear technical ownership'],
+    contactEyebrow: 'Contact',
+    contactTitle: 'Let’s discuss the role or the technical challenge.',
+    contactBody: 'The best starting point is a short message describing your environment, objective, and expected timeline.',
+    contactLabel: 'Patrick Paul professional contact links',
+    locationLabel: 'Location',
+    availabilityLabel: 'Availability',
+    availability: 'Remote technical positions and selected focused mandates',
+  },
+  fr: {
+    eyebrow: 'À propos de moi',
+    title: 'Un contributeur technique pratique qui relie l’infrastructure, les données et les opérations réelles.',
+    intro: 'Je suis Patrick Paul, spécialiste principal en infrastructures techniques établi à Gatineau, au Québec. Depuis plus de 20 ans, j’aide des équipes de recherche et d’exploitation à bâtir, stabiliser, automatiser et faire évoluer les systèmes qui soutiennent leur travail.',
+    portraitAlt: 'Portrait professionnel de Patrick Paul',
+    approachEyebrow: 'Approche de travail',
+    approachTitle: 'Ma façon de travailler',
+    approach: [
+      'Je suis particulièrement utile lorsqu’un défi dépasse les frontières habituelles : infrastructure Linux, automatisation, flux de données, équipements connectés, surveillance et intégration pratique.',
+      'Je privilégie les normes ouvertes, les conceptions maintenables, une documentation claire et les solutions qui préservent le contrôle de l’organisation sur ses infrastructures, ses données et sa propriété intellectuelle.',
+      'Je peux contribuer comme membre expérimenté d’une équipe technique ou livrer de façon autonome une évaluation, un prototype, une implantation et un transfert opérationnel bien délimités.',
+    ],
+    interestsEyebrow: 'Au-delà de l’infrastructure',
+    interestsTitle: 'Intérêts appliqués',
+    interestsBody: 'L’IoT industriel, le traitement edge, la domotique, les microcontrôleurs, l’impression 3D et la fabrication numérique gardent ma pratique technique proche des appareils réels, des contraintes physiques et des résultats mesurables.',
+    lookingEyebrow: 'Bonne compatibilité',
+    lookingTitle: 'Ce que je recherche',
+    lookingItems: ['Rôles techniques pratiques entièrement à distance', 'Travail en Linux, infrastructure, DevOps, SRE, calcul scientifique ou IoT', 'Mandats ciblés de faisabilité, prototypage, automatisation et intégration', 'Travail avec peu de responsabilités de gestion et une prise en charge technique claire'],
+    contactEyebrow: 'Coordonnées',
+    contactTitle: 'Discutons du rôle ou du défi technique.',
+    contactBody: 'Le meilleur point de départ est un court message décrivant votre environnement, votre objectif et l’échéancier envisagé.',
+    contactLabel: 'Coordonnées professionnelles de Patrick Paul',
+    locationLabel: 'Lieu',
+    availabilityLabel: 'Disponibilité',
+    availability: 'Postes techniques à distance et certains mandats ciblés',
+  },
+} as const;
+
+const t = content[lang];
+---
+
+<main id="main-content" class="about-page">
+  <section class="about-hero" aria-labelledby="about-title">
+    <div>
+      <p class="eyebrow">{t.eyebrow}</p>
+      <h1 id="about-title">{t.title}</h1>
+      <p class="lead">{t.intro}</p>
+    </div>
+    <figure class="about-portrait"><img src={portraitSrc} alt={t.portraitAlt} width="729" height="911" decoding="async" /></figure>
+  </section>
+
+  <section class="about-content" aria-labelledby="approach-title">
+    <div><p class="eyebrow">{t.approachEyebrow}</p><h2 id="approach-title">{t.approachTitle}</h2></div>
+    <div class="prose">{t.approach.map((paragraph) => <p>{paragraph}</p>)}</div>
+  </section>
+
+  <section class="about-grid">
+    <article><p class="eyebrow">{t.interestsEyebrow}</p><h2>{t.interestsTitle}</h2><p>{t.interestsBody}</p></article>
+    <article><p class="eyebrow">{t.lookingEyebrow}</p><h2>{t.lookingTitle}</h2><ul>{t.lookingItems.map((item) => <li>{item}</li>)}</ul></article>
+  </section>
+
+  <section id="contact" class="contact-card" aria-labelledby="contact-title">
+    <div><p class="eyebrow">{t.contactEyebrow}</p><h2 id="contact-title">{t.contactTitle}</h2><p>{t.contactBody}</p></div>
+    <div class="contact-details">
+      <nav aria-label={t.contactLabel}><ProfessionalLinks lang={lang} showEmailAddress /></nav>
+      <dl>
+        <div><dt>{t.locationLabel}</dt><dd>{publicProfile.location}</dd></div>
+        <div><dt>{t.availabilityLabel}</dt><dd>{t.availability}</dd></div>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<style>
+  .about-page{padding-bottom:clamp(5rem,10vw,8rem)}
+  .about-hero{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(16rem,.55fr);gap:clamp(3rem,8vw,7rem);align-items:center;padding-block:clamp(4rem,9vw,8rem)}
+  .about-hero h1{max-width:18ch;margin-block:.7rem 1.5rem;font-size:clamp(2.5rem,6vw,5rem);letter-spacing:-.045em}
+  .about-portrait{width:min(100%,20rem);aspect-ratio:729/911;margin:0 0 0 auto;border:1px solid rgb(110 198 255/28%);border-radius:1.5rem;overflow:hidden;background:var(--surface);box-shadow:0 2rem 5rem rgb(0 0 0/25%)}
+  .about-portrait img{width:100%;height:100%;object-fit:cover}
+  .about-content{display:grid;grid-template-columns:minmax(13rem,.6fr) minmax(0,1.4fr);gap:2rem 5rem;padding-block:clamp(4rem,8vw,7rem);border-top:1px solid var(--border)}
+  h2{margin:.5rem 0 0;font-size:clamp(1.8rem,4vw,3rem);line-height:1.12;letter-spacing:-.03em}.prose{max-width:68ch}.prose p:first-child{margin-top:0}.prose p,.about-grid p,.about-grid li,.contact-card p,.contact-card dd{color:var(--muted);font-size:1.06rem}
+  .about-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;padding-bottom:clamp(4rem,8vw,7rem)}.about-grid article{padding:clamp(1.5rem,4vw,2.5rem);border:1px solid var(--border);border-radius:1rem;background:var(--surface)}.about-grid ul{display:grid;gap:.75rem;margin-bottom:0;padding-left:1.25rem}
+  .contact-card{display:grid;grid-template-columns:minmax(0,1fr) minmax(20rem,.8fr);gap:3rem 5rem;align-items:start;padding:clamp(2rem,6vw,4rem);border:1px solid rgb(97 214 150/32%);border-radius:1.5rem;background:radial-gradient(circle at 100% 0,rgb(97 214 150/12%),transparent 42%),var(--surface)}
+  .contact-details{display:grid;gap:1.5rem}.contact-details dl{display:grid;gap:1rem;margin:0}.contact-details dl div{display:grid;gap:.2rem}.contact-details dt{font-weight:800}.contact-details dd{margin:0}
+  @media(max-width:800px){.about-hero,.about-content,.about-grid,.contact-card{grid-template-columns:1fr}.about-portrait{width:min(100%,18rem);margin-left:0}}
+</style>

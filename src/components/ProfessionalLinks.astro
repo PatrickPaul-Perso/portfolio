@@ -3,10 +3,10 @@ import { publicProfile } from '../data/publicProfile';
 
 interface Props {
   lang: 'en' | 'fr';
-  compact?: boolean;
+  showEmailAddress?: boolean;
 }
 
-const { lang, compact = false } = Astro.props;
+const { lang, showEmailAddress = false } = Astro.props;
 
 const labels = lang === 'en'
   ? {
@@ -23,9 +23,9 @@ const labels = lang === 'en'
     };
 ---
 
-<ul class:list={['professional-links', { compact }]}>
+<ul class="professional-links">
   <li>
-    <a href={publicProfile.emailHref} aria-label={labels.emailAria}>{labels.email}</a>
+    <a href={publicProfile.emailHref} aria-label={labels.emailAria}>{showEmailAddress ? publicProfile.email : labels.email}</a>
   </li>
   <li>
     <a href={publicProfile.linkedIn} target="_blank" rel="noopener noreferrer" aria-label={labels.linkedInAria}>LinkedIn</a>
@@ -37,9 +37,6 @@ const labels = lang === 'en'
 
 <style>
   .professional-links { display: flex; flex-wrap: wrap; gap: .75rem; margin: 0; padding: 0; list-style: none; }
-  .professional-links a { min-height: 44px; display: inline-flex; align-items: center; padding: .55rem .8rem; border: 1px solid var(--border); border-radius: .55rem; color: var(--text); font-weight: 700; text-decoration: none; }
+  .professional-links a { min-height: 44px; display: inline-flex; align-items: center; padding: .55rem .8rem; border: 1px solid var(--border); border-radius: .55rem; color: var(--text); font-weight: 700; overflow-wrap: anywhere; text-decoration: none; }
   .professional-links a:hover { border-color: var(--accent-soft); background: rgb(46 168 255 / 8%); }
-  .professional-links.compact { gap: .25rem 1rem; }
-  .professional-links.compact a { padding: .35rem 0; border-color: transparent; color: var(--accent-soft); }
-  .professional-links.compact a:hover { border-color: transparent; background: transparent; text-decoration: underline; text-underline-offset: .2em; }
 </style>
