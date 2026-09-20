@@ -1,12 +1,18 @@
 # Development Log
 
+## 2026-09-20 — NRC-GAMMA selected work and concise English title
+
+The landing page now presents NRC-GAMMA as public, verifiable evidence of Patrick’s collaborative work across edge image capture, data preparation, external annotation integration, quality assurance, and applied computer vision. The bilingual section uses only claims supported by the public repository and publication: Patrick is identified as a core team member and co-author, and the published dataset metrics and CC BY 4.0 license are shown with direct source links.
+
+The project description also explains how the technical pattern transfers to vision-assisted agriculture and industrial monitoring without presenting the original energy-monitoring project as agricultural experience or assigning Patrick sole ownership of collaborative work. The English professional title has been simplified from Senior Technical Infrastructure Specialist to Senior Infrastructure Specialist across the landing page, About metadata, and shared footer. The existing French title remains unchanged.
+
 ## 2026-09-20 — Sectors and smart-agriculture positioning
 
 The portfolio now includes synchronized English and Canadian French Sectors pages. A featured smart-agriculture section connects Patrick’s Linux, edge, IoT, telemetry, data-sovereignty, feasibility, and small-batch 3D-printing capabilities to farms, greenhouses, indoor-growing operations, equipment suppliers, and agricultural technology firms without claiming unverified agricultural deployment experience.
 
 The landing page now names the five target sectors and links directly to the detailed page. Concrete agriculture ideas include computer-vision data capture, classifier dataset preparation, integration of an external annotation service such as Amazon Mechanical Turk into a data pipeline, maple operation instrumentation, monitoring, and rapid prototyping. The wording keeps Patrick’s offer focused on the technical data pipeline rather than providing annotation services.
 
-Additional sections describe transferable applications in light manufacturing, research and laboratories, smart buildings, and data-intensive SMEs. A three-step understand, validate, and deliver path positions a bounded feasibility assessment or prototype as a practical starting point. Page metadata and footer wording now match the durable Senior Technical Infrastructure Specialist positioning.
+Additional sections describe transferable applications in light manufacturing, research and laboratories, smart buildings, and data-intensive SMEs. A three-step understand, validate, and deliver path positions a bounded feasibility assessment or prototype as a practical starting point. Page metadata and footer wording now use synchronized professional positioning in each language.
 
 ## 2026-09-20 — Contact portrait and small-batch 3D printing
 
