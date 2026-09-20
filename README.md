@@ -1,6 +1,6 @@
 # Patrick Paul — Professional Portfolio
 
-A bilingual professional portfolio focused on digital infrastructure, Linux, DevOps, automation, IoT, and applied technical systems.
+A bilingual professional portfolio focused on technical infrastructure, Linux, automation, industrial IoT, edge processing, data sovereignty, and practical delivery for small and mid-sized organizations.
 
 ## Repository goals
 

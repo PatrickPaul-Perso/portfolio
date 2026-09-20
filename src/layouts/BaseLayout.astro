@@ -23,14 +23,14 @@ const skipLabel = lang === 'en' ? 'Skip to main content' : 'Aller au contenu pri
 const languageNavLabel = lang === 'en' ? 'Language selection' : 'Choix de la langue';
 const footer = lang === 'en'
   ? {
-      role: 'Senior Digital Infrastructure Specialist',
+      role: 'Senior Technical Infrastructure Specialist',
       linksLabel: 'Patrick Paul professional links',
       locationLabel: 'Location',
       availabilityLabel: 'Available for',
       availability: ['Remote technical positions', 'Consulting mandates'],
     }
   : {
-      role: 'Spécialiste principal en infrastructures numériques',
+      role: 'Spécialiste principal en infrastructures techniques',
       linksLabel: 'Liens professionnels de Patrick Paul',
       locationLabel: 'Lieu',
       availabilityLabel: 'Disponible pour',
@@ -43,7 +43,9 @@ const footer = lang === 'en'
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description} />
+    <meta name="theme-color" content="#07111f" />
     <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
     <title>{title}</title>
   </head>
   <body>

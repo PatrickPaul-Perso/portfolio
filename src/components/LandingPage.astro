@@ -1,110 +1,113 @@
 ---
 import ProfessionalLinks from './ProfessionalLinks.astro';
 
-interface Props {
-  lang: 'en' | 'fr';
-}
-
+interface Props { lang: 'en' | 'fr'; }
 const { lang } = Astro.props;
 
 const content = {
   en: {
-    role: 'Senior Digital Infrastructure Specialist',
-    name: 'Patrick Paul',
-    practice: 'Linux, DevOps and IoT Practitioner',
-    headline: 'Reliable digital infrastructure for operations, automation, and applied innovation.',
-    introduction: 'I build and improve digital systems that help technical teams work with greater reliability, clarity, and confidence.',
-    primaryCta: 'Contact me',
-    secondaryCta: 'Explore my capabilities',
-    portraitAlt: 'Professional portrait of Patrick Paul',
-    valueEyebrow: 'Professional value',
-    valueTitle: 'Complex environments made reliable, understandable, and maintainable.',
-    valueBody: 'For more than 20 years, I have improved the infrastructure behind operational environments, R&D initiatives, proof-of-concept platforms, and technology demonstrations. My focus is hands-on engineering: solving practical problems, integrating systems, automating operations, and building reliable platforms that are easier to operate.',
+    role: 'Senior Technical Infrastructure Specialist', name: 'Patrick Paul',
+    practice: 'Linux · Automation · Edge & IoT · Data Platforms',
+    status: 'Open to selected roles and focused mandates',
+    headline: 'Practical infrastructure for connected operations.',
+    introduction: 'I help small and mid-sized organizations solve focused technology challenges: stabilizing Linux platforms, automating operations, connecting equipment and data, and moving prototypes toward reliable operation.',
+    primaryCta: 'Start a conversation', secondaryCta: 'See how I can help',
+    portraitAlt: 'Professional portrait of Patrick Paul', fitLabel: 'A practical fit for',
+    fitItems: ['Hands-on technical roles', 'Feasibility assessments and prototypes', 'Independent delivery with a clear handoff'],
+    valueEyebrow: 'What I bring',
+    valueTitle: 'Senior judgment, hands-on delivery, and systems that remain understandable.',
+    valueBody: 'For more than 20 years, I have supported research, data, and operational environments where reliability and adaptability matter. I work comfortably from infrastructure to integration, and from an initial technical assessment to documented implementation and operational handoff.',
     years: 'years of applied technical experience',
-    domains: ['Linux and containers', 'Automation and integration', 'Data and observability', 'IoT and edge systems'],
-    capabilitiesEyebrow: 'Capability preview',
-    capabilitiesTitle: 'Five ways I help technical environments move forward.',
-    capabilitiesIntro: 'Each capability is grounded in practical delivery, open standards, and systems that remain understandable to the people who operate them.',
+    domains: ['Linux and containers', 'Automation and CI/CD', 'Monitoring and data', 'Industrial IoT and edge', 'Research computing'],
+    capabilitiesEyebrow: 'Ways I can help', capabilitiesTitle: 'Focused technical work with a useful outcome.',
+    capabilitiesIntro: 'I favour open standards, maintainable designs, and right-sized solutions. For a well-bounded problem, I can take ownership from assessment through implementation, documentation, and handoff.',
     capabilities: [
-      {
-        title: 'Design digital infrastructure',
-        description: 'Shape maintainable Linux, container, data, and edge foundations around real operational needs.',
-      },
-      {
-        title: 'Connect existing systems',
-        description: 'Integrate established and emerging platforms through documented interfaces, open protocols, and pragmatic migration paths.',
-      },
-      {
-        title: 'Automate operations',
-        description: 'Replace fragile manual steps with repeatable workflows that improve reliability and reduce operational load.',
-      },
-      {
-        title: 'Observe and understand systems',
-        description: 'Use Grafana, InfluxDB, and Telegraf for open observability and time-series workflows, with Power BI as an applied analytics tool.',
-      },
-      {
-        title: 'Prototype new ideas',
-        description: 'Explore connected-system ideas with Raspberry Pi, microcontrollers, and prototype tooling such as Node-RED, Losant, and Apache NiFi.',
-      },
+      { title: 'Assess feasibility and reduce risk', description: 'Clarify the use case, evaluate integration paths, test critical assumptions, and produce an evidence-based implementation recommendation.' },
+      { title: 'Automate and standardize', description: 'Replace repeat manual work with Ansible, scripts, CI/CD workflows, containers, and documented operating patterns.' },
+      { title: 'Connect and process at the edge', description: 'Bridge equipment, sensors, applications, and data flows with Linux edge systems, MQTT, EdgeX Foundry, and open interfaces.' },
+      { title: 'Observe and troubleshoot', description: 'Build useful visibility with Zabbix, Grafana, Prometheus, InfluxDB, Telegraf, logs, and fit-for-purpose dashboards.' },
+      { title: 'Deliver a focused mandate', description: 'Own a clearly defined technical outcome, communicate progress directly, and leave behind maintainable systems and documentation.' },
     ],
-    motivationEyebrow: 'What motivates me',
-    motivationTitle: 'Useful technology, close to the work it supports.',
-    motivationBody: 'I am motivated by hands-on engineering that solves real problems: improving operations, automating workflows, advancing R&D initiatives, validating proof-of-concept platforms, and building reliable digital infrastructure.',
-    motivationNote: 'The best systems are not only capable. They are inspectable, explainable, and maintainable by the people responsible for them.',
-    contactEyebrow: 'Start a conversation',
-    contactTitle: 'Let’s discuss useful technical work.',
-    contactBody: 'Contact me about remote technical positions or consulting mandates involving infrastructure, Linux, DevOps, automation, integration, reliability, or IoT.',
-    contactLinksLabel: 'Contact Patrick Paul',
-    contactNote: 'Available for remote technical positions and consulting mandates.',
+    sovereigntyEyebrow: 'Data sovereignty by design',
+    sovereigntyTitle: 'Keep control without closing the door to cloud services.',
+    sovereigntyBody: 'Not every workload belongs in the cloud, and not every workload should stay isolated on-site. I help shape local, edge, hybrid, or cloud-connected architectures around the organization’s operational needs, risk tolerance, connectivity, and intellectual property.',
+    sovereigntyNote: 'The objective is choice: retain control of critical infrastructure and data while using cloud ingestion or managed services where they create real value.',
+    flowLabel: 'Example hybrid data flow',
+    flowNodes: [
+      { kicker: 'Field', title: 'Equipment & sensors', detail: 'Signals, controllers, devices' },
+      { kicker: 'Edge', title: 'Linux & EdgeX', detail: 'Collect, normalize, process' },
+      { kicker: 'Your infrastructure', title: 'Data & automation', detail: 'Store, monitor, integrate' },
+      { kicker: 'Optional', title: 'Cloud services', detail: 'Ingest, analyze, share' },
+    ],
+    depthEyebrow: 'Technical depth', depthTitle: 'Built across infrastructure, operations, and applied innovation.',
+    skillGroups: [
+      { title: 'Platforms', items: ['Ubuntu Linux', 'VMware', 'AWS & Azure', 'Research computing', 'Storage & backup'] },
+      { title: 'Delivery', items: ['Ansible', 'GitLab CI/CD', 'Bash & Python', 'Docker · Podman · Apptainer', 'Git'] },
+      { title: 'Connected systems', items: ['EdgeX Foundry & MQTT', 'Edge processing', 'Raspberry Pi & microcontrollers', 'Home automation', 'Evaluated: Node-RED · Losant · Apache NiFi'] },
+      { title: 'Visibility & data', items: ['Zabbix', 'Grafana', 'Prometheus', 'InfluxDB & Telegraf', 'Power BI'] },
+    ],
+    explorationEyebrow: 'Applied exploration', explorationTitle: 'Curiosity that stays close to real systems.',
+    explorationBody: 'My personal technical work includes industrial IoT patterns, home automation, microcontrollers, edge processing, 3D printing, and digital fabrication. I have also evaluated Node-RED, Losant, and Apache NiFi through prototype and exploratory work. These projects keep design, prototyping, troubleshooting, and physical constraints connected to day-to-day engineering practice.',
+    engagementEyebrow: 'Ways to work together', engagementTitle: 'A senior technical contributor for the role or the problem.',
+    engagements: [
+      { label: 'Employment', title: 'Hands-on technical role', text: 'Infrastructure, platform, Linux, automation, research computing, SRE, or IoT work with limited management overhead.' },
+      { label: 'Focused mandate', title: 'Feasibility before implementation', text: 'A bounded assessment or prototype to validate the use case, architecture, integration approach, risks, and practical next steps before a larger investment.' },
+    ],
+    contactEyebrow: 'Start a conversation', contactTitle: 'Bring me the technical challenge.',
+    contactBody: 'If your organization needs an experienced technical contributor who can understand the environment, work independently, and deliver a maintainable result, let’s talk.',
+    contactLinksLabel: 'Contact Patrick Paul', contactNote: 'Based in Gatineau, Québec, Canada. Available for remote roles and selected mandates.',
   },
   fr: {
-    role: 'Spécialiste principal en infrastructures numériques',
-    name: 'Patrick Paul',
-    practice: 'Spécialiste Linux, DevOps et IoT',
-    headline: 'Des infrastructures numériques fiables pour les opérations, l’automatisation et l’innovation appliquée.',
-    introduction: 'Je conçois et améliore des systèmes numériques qui permettent aux équipes techniques de travailler avec plus de fiabilité, de clarté et de confiance.',
-    primaryCta: 'Me joindre',
-    secondaryCta: 'Explorer mes capacités',
-    portraitAlt: 'Portrait professionnel de Patrick Paul',
-    valueEyebrow: 'Valeur professionnelle',
-    valueTitle: 'Des environnements complexes rendus fiables, compréhensibles et faciles à maintenir.',
-    valueBody: 'Depuis plus de 20 ans, j’améliore l’infrastructure qui soutient des environnements opérationnels, des initiatives de R-D, des plateformes de validation de principe et des démonstrations technologiques. Je privilégie l’ingénierie pratique : résoudre des problèmes concrets, intégrer des systèmes, automatiser les opérations et bâtir des plateformes fiables et plus faciles à exploiter.',
+    role: 'Spécialiste principal en infrastructures techniques', name: 'Patrick Paul',
+    practice: 'Linux · Automatisation · Edge et IoT · Plateformes de données',
+    status: 'Ouvert à certains postes et mandats ciblés',
+    headline: 'Des infrastructures pratiques pour des opérations connectées.',
+    introduction: 'J’aide les petites et moyennes organisations à résoudre des défis technologiques précis : stabiliser leurs plateformes Linux, automatiser leurs opérations, relier leurs équipements et leurs données, puis amener leurs prototypes vers une exploitation fiable.',
+    primaryCta: 'Amorcer une discussion', secondaryCta: 'Voir comment je peux aider',
+    portraitAlt: 'Portrait professionnel de Patrick Paul', fitLabel: 'Un profil adapté aux besoins suivants',
+    fitItems: ['Rôles techniques pratiques', 'Évaluations de faisabilité et prototypes', 'Livraison autonome avec transfert clair'],
+    valueEyebrow: 'Ce que j’apporte',
+    valueTitle: 'Un jugement expérimenté, une réalisation concrète et des systèmes qui restent compréhensibles.',
+    valueBody: 'Depuis plus de 20 ans, je soutiens des environnements de recherche, de données et d’exploitation où la fiabilité et l’adaptabilité sont essentielles. Je travaille aussi bien sur l’infrastructure que sur l’intégration, depuis l’évaluation technique initiale jusqu’à l’implantation documentée et au transfert opérationnel.',
     years: 'ans d’expérience technique appliquée',
-    domains: ['Linux et conteneurs', 'Automatisation et intégration', 'Données et observabilité', 'IoT et systèmes en périphérie'],
-    capabilitiesEyebrow: 'Aperçu des capacités',
-    capabilitiesTitle: 'Cinq façons de faire progresser les environnements techniques.',
-    capabilitiesIntro: 'Chaque capacité repose sur une expérience pratique, des normes ouvertes et des systèmes qui demeurent compréhensibles pour les personnes qui les exploitent.',
+    domains: ['Linux et conteneurs', 'Automatisation et CI/CD', 'Surveillance et données', 'IoT industriel et edge', 'Calcul scientifique'],
+    capabilitiesEyebrow: 'Comment je peux aider', capabilitiesTitle: 'Un travail technique ciblé qui produit un résultat utile.',
+    capabilitiesIntro: 'Je privilégie les normes ouvertes, les conceptions faciles à maintenir et les solutions proportionnées au besoin. Pour un problème bien délimité, je peux prendre en charge l’évaluation, l’implantation, la documentation et le transfert.',
     capabilities: [
-      {
-        title: 'Concevoir l’infrastructure numérique',
-        description: 'Créer des fondations Linux, de conteneurs, de données et d’informatique en périphérie faciles à maintenir et adaptées aux besoins opérationnels réels.',
-      },
-      {
-        title: 'Relier les systèmes existants',
-        description: 'Intégrer les plateformes établies et émergentes au moyen d’interfaces documentées, de protocoles ouverts et de parcours de migration pragmatiques.',
-      },
-      {
-        title: 'Automatiser les opérations',
-        description: 'Remplacer les étapes manuelles fragiles par des processus reproductibles qui améliorent la fiabilité et réduisent la charge opérationnelle.',
-      },
-      {
-        title: 'Observer et comprendre les systèmes',
-        description: 'Utiliser Grafana, InfluxDB et Telegraf pour l’observabilité ouverte et les séries chronologiques, ainsi que Power BI comme outil d’analyse appliquée.',
-      },
-      {
-        title: 'Prototyper de nouvelles idées',
-        description: 'Explorer des systèmes connectés avec Raspberry Pi, des microcontrôleurs et des outils de prototypage comme Node-RED, Losant et Apache NiFi.',
-      },
+      { title: 'Évaluer la faisabilité et réduire les risques', description: 'Clarifier le cas d’usage, évaluer les parcours d’intégration, tester les hypothèses critiques et produire une recommandation d’implantation fondée sur des résultats.' },
+      { title: 'Automatiser et normaliser', description: 'Remplacer le travail manuel répétitif par Ansible, des scripts, des pipelines CI/CD, des conteneurs et des méthodes d’exploitation documentées.' },
+      { title: 'Connecter et traiter à la périphérie', description: 'Relier équipements, capteurs, applications et flux de données avec Linux, MQTT, EdgeX Foundry et des interfaces ouvertes.' },
+      { title: 'Observer et dépanner', description: 'Créer une visibilité utile avec Zabbix, Grafana, Prometheus, InfluxDB, Telegraf, les journaux et des tableaux de bord adaptés.' },
+      { title: 'Réaliser un mandat ciblé', description: 'Prendre en charge un résultat technique clairement défini, communiquer directement et laisser des systèmes maintenables et documentés.' },
     ],
-    motivationEyebrow: 'Ce qui me motive',
-    motivationTitle: 'Une technologie utile, proche du travail qu’elle soutient.',
-    motivationBody: 'Je suis motivé par une ingénierie pratique qui résout des problèmes concrets : améliorer les opérations, automatiser les processus, faire progresser des initiatives de R-D, réaliser des validations de principe et bâtir des infrastructures numériques fiables.',
-    motivationNote: 'Les meilleurs systèmes ne sont pas seulement performants. Ils peuvent être inspectés, expliqués et entretenus par les personnes qui en sont responsables.',
-    contactEyebrow: 'Amorcer une discussion',
-    contactTitle: 'Parlons d’un travail technique utile.',
-    contactBody: 'Communiquez avec moi au sujet d’un poste technique à distance ou d’un mandat de consultation en infrastructure, Linux, DevOps, automatisation, intégration, fiabilité ou IoT.',
-    contactLinksLabel: 'Communiquer avec Patrick Paul',
-    contactNote: 'Disponible pour des postes techniques à distance et des mandats de consultation.',
+    sovereigntyEyebrow: 'Souveraineté des données dès la conception',
+    sovereigntyTitle: 'Conserver le contrôle sans fermer la porte aux services infonuagiques.',
+    sovereigntyBody: 'Toutes les charges de travail n’ont pas leur place dans le nuage, et toutes ne doivent pas rester isolées sur place. J’aide à concevoir des architectures locales, edge, hybrides ou connectées au nuage selon les besoins opérationnels, les risques, la connectivité et la propriété intellectuelle de l’organisation.',
+    sovereigntyNote: 'L’objectif est de préserver le choix : garder le contrôle des infrastructures et des données critiques tout en utilisant l’ingestion infonuagique ou des services gérés lorsqu’ils procurent une valeur réelle.',
+    flowLabel: 'Exemple de flux de données hybride',
+    flowNodes: [
+      { kicker: 'Terrain', title: 'Équipements et capteurs', detail: 'Signaux, contrôleurs, appareils' },
+      { kicker: 'Edge', title: 'Linux et EdgeX', detail: 'Collecter, normaliser, traiter' },
+      { kicker: 'Votre infrastructure', title: 'Données et automatisation', detail: 'Stocker, surveiller, intégrer' },
+      { kicker: 'Facultatif', title: 'Services infonuagiques', detail: 'Ingérer, analyser, partager' },
+    ],
+    depthEyebrow: 'Profondeur technique', depthTitle: 'Une expérience qui relie infrastructure, exploitation et innovation appliquée.',
+    skillGroups: [
+      { title: 'Plateformes', items: ['Ubuntu Linux', 'VMware', 'AWS et Azure', 'Calcul scientifique', 'Stockage et sauvegarde'] },
+      { title: 'Livraison', items: ['Ansible', 'GitLab CI/CD', 'Bash et Python', 'Docker · Podman · Apptainer', 'Git'] },
+      { title: 'Systèmes connectés', items: ['EdgeX Foundry et MQTT', 'Traitement edge', 'Raspberry Pi et microcontrôleurs', 'Domotique', 'Évalués : Node-RED · Losant · Apache NiFi'] },
+      { title: 'Visibilité et données', items: ['Zabbix', 'Grafana', 'Prometheus', 'InfluxDB et Telegraf', 'Power BI'] },
+    ],
+    explorationEyebrow: 'Exploration appliquée', explorationTitle: 'Une curiosité qui reste proche des systèmes réels.',
+    explorationBody: 'Mes travaux techniques personnels touchent les modèles d’IoT industriel, la domotique, les microcontrôleurs, le traitement edge, l’impression 3D et la fabrication numérique. J’ai aussi évalué Node-RED, Losant et Apache NiFi dans le cadre de prototypes et de travaux exploratoires. Ces projets relient la conception, le prototypage, le dépannage et les contraintes physiques à ma pratique quotidienne de l’ingénierie.',
+    engagementEyebrow: 'Façons de collaborer', engagementTitle: 'Un contributeur technique principal pour le rôle ou le problème.',
+    engagements: [
+      { label: 'Emploi', title: 'Rôle technique pratique', text: 'Infrastructure, plateformes, Linux, automatisation, calcul scientifique, SRE ou IoT, avec peu de responsabilités de gestion.' },
+      { label: 'Mandat ciblé', title: 'La faisabilité avant l’implantation', text: 'Une évaluation ou un prototype délimité pour valider le cas d’usage, l’architecture, l’intégration, les risques et les prochaines étapes avant un investissement plus important.' },
+    ],
+    contactEyebrow: 'Amorcer une discussion', contactTitle: 'Présentez-moi le défi technique.',
+    contactBody: 'Si votre organisation cherche une personne expérimentée capable de comprendre l’environnement, de travailler de façon autonome et de livrer un résultat maintenable, discutons-en.',
+    contactLinksLabel: 'Communiquer avec Patrick Paul', contactNote: 'Établi à Gatineau, Québec, Canada. Disponible pour des postes à distance et certains mandats.',
   },
 } as const;
 
@@ -117,138 +120,63 @@ const portraitSrc = `${base}images/patrick-paul-professional-portrait.webp`;
 <main id="main-content" class="landing-page">
   <section class="hero" aria-labelledby="hero-title">
     <div class="hero-copy">
-      <p class="eyebrow">{t.role}</p>
-      <h1 id="hero-title">{t.name}</h1>
-      <p class="practice">{t.practice}</p>
-      <p class="hero-statement">{t.headline}</p>
-      <p class="lead">{t.introduction}</p>
-      <div class="actions">
-        <a class="button primary" href="#contact">{t.primaryCta}</a>
-        <a class="button" href="#capabilities">{t.secondaryCta}</a>
-      </div>
+      <p class="eyebrow">{t.role}</p><h1 id="hero-title">{t.name}</h1><p class="practice">{t.practice}</p>
+      <p class="status"><span aria-hidden="true"></span>{t.status}</p>
+      <p class="hero-statement">{t.headline}</p><p class="lead">{t.introduction}</p>
+      <div class="actions"><a class="button primary" href="#contact">{t.primaryCta}</a><a class="button" href="#capabilities">{t.secondaryCta}</a></div>
     </div>
-
-    <figure class="portrait-card">
-      <img
-        src={portraitSrc}
-        alt={t.portraitAlt}
-        width="729"
-        height="911"
-        loading="eager"
-        decoding="async"
-        fetchpriority="high"
-      />
-    </figure>
+    <div class="hero-aside">
+      <figure class="portrait-card"><img src={portraitSrc} alt={t.portraitAlt} width="729" height="911" loading="eager" decoding="async" fetchpriority="high" /></figure>
+      <aside class="fit-card" aria-label={t.fitLabel}><strong>{t.fitLabel}</strong><ul>{t.fitItems.map((item) => <li>{item}</li>)}</ul></aside>
+    </div>
   </section>
 
   <section class="value-section" aria-labelledby="value-title">
-    <div class="section-heading">
-      <p class="eyebrow">{t.valueEyebrow}</p>
-      <h2 id="value-title">{t.valueTitle}</h2>
-    </div>
+    <div class="section-heading"><p class="eyebrow">{t.valueEyebrow}</p><h2 id="value-title">{t.valueTitle}</h2></div>
     <div class="value-grid">
-      <div class="experience-marker" aria-label={`20+ ${t.years}`}>
-        <strong aria-hidden="true">20+</strong>
-        <span>{t.years}</span>
-      </div>
-      <div>
-        <p class="section-copy">{t.valueBody}</p>
-        <ul class="domain-list">
-          {t.domains.map((domain) => <li>{domain}</li>)}
-        </ul>
-      </div>
+      <div class="experience-marker" aria-label={`20+ ${t.years}`}><strong aria-hidden="true">20+</strong><span>{t.years}</span></div>
+      <div><p class="section-copy">{t.valueBody}</p><ul class="domain-list">{t.domains.map((domain) => <li>{domain}</li>)}</ul></div>
     </div>
   </section>
 
   <section id="capabilities" class="capabilities-section" aria-labelledby="capabilities-title">
-    <div class="section-heading narrow">
-      <p class="eyebrow">{t.capabilitiesEyebrow}</p>
-      <h2 id="capabilities-title">{t.capabilitiesTitle}</h2>
-      <p class="section-copy">{t.capabilitiesIntro}</p>
-    </div>
-    <div class="capability-grid">
-      {t.capabilities.map((capability, index) => (
-        <article class="capability-card">
-          <span class="capability-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
-          <h3>{capability.title}</h3>
-          <p>{capability.description}</p>
-        </article>
-      ))}
-    </div>
+    <div class="section-heading narrow"><p class="eyebrow">{t.capabilitiesEyebrow}</p><h2 id="capabilities-title">{t.capabilitiesTitle}</h2><p class="section-copy">{t.capabilitiesIntro}</p></div>
+    <div class="capability-grid">{t.capabilities.map((capability, index) => <article class="capability-card"><span class="capability-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span><h3>{capability.title}</h3><p>{capability.description}</p></article>)}</div>
   </section>
 
-  <section class="motivation-section" aria-labelledby="motivation-title">
-    <div>
-      <p class="eyebrow">{t.motivationEyebrow}</p>
-      <h2 id="motivation-title">{t.motivationTitle}</h2>
-    </div>
-    <div>
-      <p class="section-copy">{t.motivationBody}</p>
-      <blockquote>{t.motivationNote}</blockquote>
-    </div>
+  <section class="sovereignty-section" aria-labelledby="sovereignty-title">
+    <div class="sovereignty-copy"><p class="eyebrow">{t.sovereigntyEyebrow}</p><h2 id="sovereignty-title">{t.sovereigntyTitle}</h2><p class="section-copy">{t.sovereigntyBody}</p><blockquote>{t.sovereigntyNote}</blockquote></div>
+    <div class="flow-card" role="img" aria-label={t.flowLabel}><p class="flow-label">{t.flowLabel}</p><ol class="flow-list">{t.flowNodes.map((node, index) => <li class="flow-node"><span class="flow-kicker">{node.kicker}</span><strong>{node.title}</strong><small>{node.detail}</small>{index < t.flowNodes.length - 1 && <span class="flow-arrow" aria-hidden="true">→</span>}</li>)}</ol></div>
+  </section>
+
+  <section class="depth-section" aria-labelledby="depth-title">
+    <div class="section-heading narrow"><p class="eyebrow">{t.depthEyebrow}</p><h2 id="depth-title">{t.depthTitle}</h2></div>
+    <div class="skill-grid">{t.skillGroups.map((group) => <article class="skill-group"><h3>{group.title}</h3><ul>{group.items.map((item) => <li>{item}</li>)}</ul></article>)}</div>
+  </section>
+
+  <section class="exploration-section" aria-labelledby="exploration-title"><div><p class="eyebrow">{t.explorationEyebrow}</p><h2 id="exploration-title">{t.explorationTitle}</h2></div><p class="section-copy">{t.explorationBody}</p></section>
+
+  <section class="engagement-section" aria-labelledby="engagement-title">
+    <div class="section-heading narrow"><p class="eyebrow">{t.engagementEyebrow}</p><h2 id="engagement-title">{t.engagementTitle}</h2></div>
+    <div class="engagement-grid">{t.engagements.map((engagement) => <article class="engagement-card"><span>{engagement.label}</span><h3>{engagement.title}</h3><p>{engagement.text}</p></article>)}</div>
   </section>
 
   <section id="contact" class="contact-section" aria-labelledby="contact-title">
-    <div>
-      <p class="eyebrow">{t.contactEyebrow}</p>
-      <h2 id="contact-title">{t.contactTitle}</h2>
-      <p class="section-copy">{t.contactBody}</p>
-    </div>
-    <nav class="contact-action" aria-label={t.contactLinksLabel}>
-      <ProfessionalLinks lang={lang} />
-      <p>{t.contactNote}</p>
-    </nav>
+    <div><p class="eyebrow">{t.contactEyebrow}</p><h2 id="contact-title">{t.contactTitle}</h2><p class="section-copy">{t.contactBody}</p></div>
+    <nav class="contact-action" aria-label={t.contactLinksLabel}><ProfessionalLinks lang={lang} /><p>{t.contactNote}</p></nav>
   </section>
 </main>
 
 <style>
-  .landing-page { position: relative; }
-  .landing-page::before { content: ''; position: absolute; inset: 3rem 0 auto; height: 34rem; z-index: -1; pointer-events: none; background: radial-gradient(circle at 80% 35%, rgb(46 168 255 / 14%), transparent 42%), repeating-linear-gradient(115deg, transparent 0 26px, rgb(110 198 255 / 3%) 27px 28px); mask-image: linear-gradient(to bottom, black, transparent); }
-  .hero { min-height: calc(100vh - 5rem); display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(16rem, .7fr); gap: clamp(3rem, 8vw, 7rem); align-items: center; padding-block: clamp(4rem, 9vw, 8rem); }
-  .hero-copy { min-width: 0; }
-  .hero h1 { max-width: none; margin-block: .35rem .25rem; font-size: clamp(3.7rem, 9vw, 7.5rem); letter-spacing: -.06em; }
-  .practice { margin: 0; color: var(--accent-soft); font-size: clamp(1.1rem, 2vw, 1.4rem); font-weight: 700; }
-  .hero-statement { max-width: 20ch; margin-block: 2.2rem 1rem; font-size: clamp(1.65rem, 3.2vw, 2.7rem); font-weight: 700; line-height: 1.18; letter-spacing: -.025em; }
-  .portrait-card { position: relative; width: min(100%, 23rem); justify-self: end; aspect-ratio: 729 / 911; margin: 0; border: 1px solid rgb(110 198 255 / 26%); border-radius: 1.75rem; overflow: hidden; background: var(--surface); box-shadow: 0 2rem 5rem rgb(0 0 0 / 28%); }
-  .portrait-card img { width: 100%; height: 100%; object-fit: cover; }
-  .value-section, .capabilities-section, .motivation-section { padding-block: clamp(5rem, 10vw, 8rem); border-top: 1px solid var(--border); }
-  .section-heading { display: grid; grid-template-columns: minmax(10rem, .45fr) minmax(0, 1fr); gap: 2rem 4rem; align-items: start; margin-bottom: 3.5rem; }
-  .section-heading.narrow { grid-template-columns: 1fr; max-width: 48rem; gap: .7rem; }
-  .section-heading h2, .motivation-section h2, .contact-section h2 { margin: 0; max-width: 20ch; font-size: clamp(2rem, 4vw, 3.6rem); line-height: 1.12; letter-spacing: -.035em; }
-  .value-grid { display: grid; grid-template-columns: minmax(13rem, .45fr) minmax(0, 1fr); gap: 3rem 4rem; }
-  .experience-marker { display: grid; align-content: start; }
-  .experience-marker strong { color: var(--accent-soft); font-size: clamp(4.5rem, 10vw, 7rem); line-height: .9; letter-spacing: -.07em; }
-  .experience-marker span { max-width: 15ch; margin-top: .8rem; color: var(--muted); font-weight: 700; }
-  .section-copy { max-width: 66ch; margin-top: 0; color: var(--muted); font-size: clamp(1.05rem, 1.7vw, 1.22rem); }
-  .domain-list { display: flex; flex-wrap: wrap; gap: .65rem; margin: 2rem 0 0; padding: 0; list-style: none; }
-  .domain-list li { padding: .55rem .8rem; border: 1px solid var(--border); border-radius: 999px; background: rgb(13 27 45 / 72%); font-size: .9rem; }
-  .capability-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1rem; }
-  .capability-card { position: relative; grid-column: span 2; min-height: 17rem; padding: 1.5rem; border: 1px solid var(--border); border-radius: 1rem; overflow: hidden; background: linear-gradient(145deg, rgb(18 36 58 / 82%), rgb(9 22 38 / 92%)); }
-  .capability-card:nth-child(4) { grid-column: 2 / span 2; }
-  .capability-card::after { content: ''; position: absolute; right: -2rem; bottom: -2rem; width: 8rem; aspect-ratio: 1; border: 1px solid rgb(110 198 255 / 16%); border-radius: 50%; box-shadow: 0 0 0 1.4rem rgb(110 198 255 / 4%), 0 0 0 2.8rem rgb(110 198 255 / 3%); }
-  .capability-number { color: var(--accent-soft); font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: .84rem; }
-  .capability-card h3 { max-width: 17ch; margin-block: 2.6rem .8rem; font-size: 1.35rem; line-height: 1.25; }
-  .capability-card p { position: relative; z-index: 1; margin: 0; color: var(--muted); }
-  .motivation-section { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 3rem 6rem; }
-  blockquote { margin: 2.25rem 0 0; padding: .35rem 0 .35rem 1.5rem; border-left: 3px solid var(--accent); color: var(--text); font-size: 1.1rem; }
-  .contact-section { display: grid; grid-template-columns: minmax(0, 1fr) minmax(16rem, .55fr); gap: 3rem 6rem; align-items: end; margin-bottom: clamp(5rem, 10vw, 8rem); padding: clamp(2rem, 6vw, 4rem); border: 1px solid rgb(110 198 255 / 28%); border-radius: 1.5rem; background: radial-gradient(circle at 100% 0, rgb(46 168 255 / 18%), transparent 42%), var(--surface); }
-  .contact-action { display: grid; gap: 1rem; justify-items: start; }
-  .contact-action p { margin: 0; color: var(--muted); font-size: .86rem; }
-  @media (max-width: 860px) {
-    .hero { grid-template-columns: 1fr; }
-    .portrait-card { width: min(100%, 20rem); justify-self: start; }
-    .section-heading, .value-grid, .motivation-section, .contact-section { grid-template-columns: 1fr; }
-    .capability-grid { grid-template-columns: repeat(2, 1fr); }
-    .capability-card, .capability-card:nth-child(4) { grid-column: auto; }
-    .capability-card:last-child { grid-column: 1 / -1; }
-  }
-  @media (max-width: 520px) {
-    .hero { min-height: auto; }
-    .hero h1 { font-size: clamp(3.3rem, 18vw, 4.7rem); overflow-wrap: anywhere; }
-    .hero-statement { font-size: clamp(1.45rem, 8vw, 2rem); }
-    .portrait-card { width: 100%; }
-    .capability-grid { grid-template-columns: 1fr; }
-    .capability-card, .capability-card:nth-child(4), .capability-card:last-child { grid-column: auto; min-height: auto; }
-    .contact-section { padding: 1.5rem; }
-  }
+  .landing-page{position:relative}.landing-page::before{content:'';position:absolute;inset:3rem 0 auto;height:36rem;z-index:-1;pointer-events:none;background:radial-gradient(circle at 82% 30%,rgb(46 168 255/16%),transparent 38%),radial-gradient(circle at 68% 48%,rgb(97 214 150/10%),transparent 32%),repeating-linear-gradient(115deg,transparent 0 26px,rgb(110 198 255/3%) 27px 28px);mask-image:linear-gradient(to bottom,black,transparent)}
+  .hero{min-height:calc(100vh - 5rem);display:grid;grid-template-columns:minmax(0,1.25fr) minmax(17rem,.75fr);gap:clamp(3rem,8vw,7rem);align-items:center;padding-block:clamp(4rem,8vw,7rem)}.hero h1{max-width:none;margin-block:.35rem .25rem;font-size:clamp(3.7rem,9vw,7.5rem);letter-spacing:-.06em}.practice{margin:0;color:var(--accent-soft);font-size:clamp(1.05rem,2vw,1.35rem);font-weight:700}.status{display:inline-flex;align-items:center;gap:.55rem;margin:1.4rem 0 0;padding:.45rem .7rem;border:1px solid rgb(97 214 150/35%);border-radius:999px;background:rgb(97 214 150/8%);color:var(--green-soft);font-size:.85rem;font-weight:700}.status span{width:.55rem;height:.55rem;border-radius:50%;background:var(--green);box-shadow:0 0 0 .28rem rgb(97 214 150/12%);animation:status-pulse 2.8s ease-in-out infinite}.hero-statement{max-width:20ch;margin-block:2rem 1rem;font-size:clamp(1.65rem,3.2vw,2.75rem);font-weight:750;line-height:1.16;letter-spacing:-.03em}
+  .hero-aside{position:relative}.portrait-card{position:relative;width:min(100%,23rem);aspect-ratio:729/911;margin:0 0 0 auto;border:1px solid rgb(110 198 255/28%);border-radius:1.75rem;overflow:hidden;background:var(--surface);box-shadow:0 2rem 5rem rgb(0 0 0/28%)}.portrait-card img{width:100%;height:100%;object-fit:cover}.fit-card{position:relative;z-index:1;width:min(22rem,calc(100% - 1rem));margin:-3.5rem 0 0 -1rem;padding:1.1rem 1.2rem;border:1px solid var(--border);border-radius:1rem;background:rgb(9 22 38/94%);box-shadow:0 1.25rem 3rem rgb(0 0 0/28%);backdrop-filter:blur(12px)}.fit-card strong{color:var(--green-soft);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase}.fit-card ul{display:grid;gap:.35rem;margin:.7rem 0 0;padding:0;list-style:none}.fit-card li{display:flex;gap:.55rem;color:var(--muted);font-size:.9rem}.fit-card li::before{content:'✓';color:var(--green);font-weight:800}
+  .value-section,.capabilities-section,.sovereignty-section,.depth-section,.exploration-section,.engagement-section{padding-block:clamp(5rem,10vw,8rem);border-top:1px solid var(--border)}.section-heading{display:grid;grid-template-columns:minmax(10rem,.45fr) minmax(0,1fr);gap:2rem 4rem;align-items:start;margin-bottom:3.5rem}.section-heading.narrow{grid-template-columns:1fr;max-width:52rem;gap:.7rem}.section-heading h2,.sovereignty-section h2,.exploration-section h2,.contact-section h2{margin:0;max-width:22ch;font-size:clamp(2rem,4vw,3.6rem);line-height:1.1;letter-spacing:-.035em}.value-grid{display:grid;grid-template-columns:minmax(13rem,.45fr) minmax(0,1fr);gap:3rem 4rem}.experience-marker{display:grid;align-content:start}.experience-marker strong{color:var(--accent-soft);font-size:clamp(4.5rem,10vw,7rem);line-height:.9;letter-spacing:-.07em}.experience-marker span{max-width:15ch;margin-top:.8rem;color:var(--muted);font-weight:700}.section-copy{max-width:68ch;margin-top:0;color:var(--muted);font-size:clamp(1.05rem,1.7vw,1.22rem)}.domain-list{display:flex;flex-wrap:wrap;gap:.65rem;margin:2rem 0 0;padding:0;list-style:none}.domain-list li{padding:.55rem .8rem;border:1px solid var(--border);border-radius:999px;background:rgb(13 27 45/72%);font-size:.9rem}
+  .capability-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:1rem}.capability-card{position:relative;grid-column:span 2;min-height:18rem;padding:1.5rem;border:1px solid var(--border);border-radius:1rem;overflow:hidden;background:linear-gradient(145deg,rgb(18 36 58/82%),rgb(9 22 38/92%))}.capability-card:nth-child(4){grid-column:2/span 2}.capability-card::after{content:'';position:absolute;right:-2rem;bottom:-2rem;width:8rem;aspect-ratio:1;border:1px solid rgb(110 198 255/16%);border-radius:50%;box-shadow:0 0 0 1.4rem rgb(110 198 255/4%),0 0 0 2.8rem rgb(110 198 255/3%)}.capability-number{color:var(--accent-soft);font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.84rem}.capability-card h3{max-width:17ch;margin-block:2.6rem .8rem;font-size:1.35rem;line-height:1.25}.capability-card p{position:relative;z-index:1;margin:0;color:var(--muted)}
+  .sovereignty-section{display:grid;grid-template-columns:minmax(0,.9fr) minmax(22rem,1.1fr);gap:4rem 6rem;align-items:center}.sovereignty-copy{display:grid;gap:.9rem}blockquote{margin:1rem 0 0;padding:.35rem 0 .35rem 1.5rem;border-left:3px solid var(--green);color:var(--text);font-size:1.06rem}.flow-card{position:relative;padding:1.5rem;border:1px solid rgb(97 214 150/28%);border-radius:1.25rem;overflow:hidden;background:linear-gradient(145deg,rgb(9 29 35/94%),rgb(8 20 35/96%))}.flow-card::before{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,transparent,rgb(97 214 150/5%),transparent);transform:translateX(-100%);animation:data-sweep 5s ease-in-out infinite}.flow-label{position:relative;margin:0 0 1.25rem;color:var(--green-soft);font-size:.8rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase}.flow-list{position:relative;display:grid;gap:.75rem;margin:0;padding:0;list-style:none}.flow-node{position:relative;display:grid;gap:.15rem;padding:1rem 2.75rem 1rem 1rem;border:1px solid rgb(110 198 255/18%);border-radius:.75rem;background:rgb(7 17 31/72%)}.flow-kicker{color:var(--accent-soft);font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.flow-node strong{font-size:1.02rem}.flow-node small{color:var(--muted);font-size:.82rem}.flow-arrow{position:absolute;right:1rem;top:50%;color:var(--green);font-size:1.3rem;transform:translateY(-50%) rotate(90deg)}
+  .skill-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}.skill-group{padding:1.35rem;border-top:2px solid var(--accent);background:rgb(13 27 45/52%)}.skill-group:nth-child(even){border-top-color:var(--green)}.skill-group h3{margin:0 0 1rem;font-size:1.08rem}.skill-group ul{display:grid;gap:.5rem;margin:0;padding:0;color:var(--muted);list-style:none}.skill-group li{padding-bottom:.5rem;border-bottom:1px solid rgb(36 65 95/65%)}.exploration-section{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:3rem 6rem}.engagement-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}.engagement-card{padding:clamp(1.5rem,4vw,2.5rem);border:1px solid var(--border);border-radius:1rem;background:var(--surface)}.engagement-card span{color:var(--green-soft);font-size:.78rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase}.engagement-card h3{margin-block:.7rem .8rem;font-size:clamp(1.4rem,3vw,2rem)}.engagement-card p{margin:0;color:var(--muted)}
+  .contact-section{display:grid;grid-template-columns:minmax(0,1fr) minmax(18rem,.6fr);gap:3rem 6rem;align-items:end;margin-bottom:clamp(5rem,10vw,8rem);padding:clamp(2rem,6vw,4rem);border:1px solid rgb(110 198 255/28%);border-radius:1.5rem;background:radial-gradient(circle at 100% 0,rgb(46 168 255/18%),transparent 42%),var(--surface)}.contact-action{display:grid;gap:1rem;justify-items:start}.contact-action p{margin:0;color:var(--muted);font-size:.86rem}
+  @keyframes status-pulse{0%,100%{box-shadow:0 0 0 .28rem rgb(97 214 150/10%)}50%{box-shadow:0 0 0 .45rem rgb(97 214 150/2%)}}@keyframes data-sweep{0%,25%{transform:translateX(-100%)}75%,100%{transform:translateX(100%)}}
+  @media(max-width:900px){.hero,.sovereignty-section{grid-template-columns:1fr}.hero-aside{width:min(100%,24rem)}.portrait-card{width:min(100%,20rem);margin-left:0}.section-heading,.value-grid,.exploration-section,.contact-section{grid-template-columns:1fr}.capability-grid{grid-template-columns:repeat(2,1fr)}.capability-card,.capability-card:nth-child(4){grid-column:auto}.capability-card:last-child{grid-column:1/-1}.skill-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.hero{min-height:auto}.hero h1{font-size:clamp(3.3rem,18vw,4.7rem);overflow-wrap:anywhere}.hero-statement{font-size:clamp(1.45rem,8vw,2rem)}.portrait-card{width:100%}.fit-card{width:calc(100% - .75rem);margin-left:.75rem}.capability-grid,.skill-grid,.engagement-grid{grid-template-columns:1fr}.capability-card,.capability-card:nth-child(4),.capability-card:last-child{grid-column:auto;min-height:auto}.contact-section{padding:1.5rem}}
 </style>

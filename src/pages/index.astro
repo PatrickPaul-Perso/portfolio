@@ -16,7 +16,7 @@ const base = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
       } catch {
         // Fall back to the browser language when storage is unavailable.
       }
-      const preferred = stored ?? (navigator.languages?.some((language) => language.toLowerCase().startsWith('fr')) ? 'fr' : 'en');
+      const preferred = stored === 'fr' ? 'fr' : 'en';
       window.location.replace(`${base}${preferred}/`);
     </script>
     <noscript><meta http-equiv="refresh" content="0; url=./en/" /></noscript>
