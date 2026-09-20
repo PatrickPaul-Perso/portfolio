@@ -1,6 +1,4 @@
 ---
-import ProfessionalLinks from './ProfessionalLinks.astro';
-
 interface Props { lang: 'en' | 'fr'; }
 const { lang } = Astro.props;
 
@@ -53,9 +51,9 @@ const content = {
       { label: 'Employment', title: 'Hands-on technical role', text: 'Infrastructure, platform, Linux, automation, research computing, SRE, or IoT work with limited management overhead.' },
       { label: 'Focused mandate', title: 'Feasibility before implementation', text: 'A bounded assessment or prototype to validate the use case, architecture, integration approach, risks, and practical next steps before a larger investment.' },
     ],
-    contactEyebrow: 'Start a conversation', contactTitle: 'Bring me the technical challenge.',
-    contactBody: 'If your organization needs an experienced technical contributor who can understand the environment, work independently, and deliver a maintainable result, let’s talk.',
-    contactLinksLabel: 'Contact Patrick Paul', contactNote: 'Based in Gatineau, Québec, Canada. Available for remote roles and selected mandates.',
+    contactEyebrow: 'About and contact', contactTitle: 'Bring me the technical challenge.',
+    contactBody: 'Learn more about how I work, what I am looking for, and how to reach me for a technical role or a focused mandate.',
+    contactCta: 'About me and contact details',
   },
   fr: {
     role: 'Spécialiste principal en infrastructures techniques', name: 'Patrick Paul',
@@ -105,9 +103,9 @@ const content = {
       { label: 'Emploi', title: 'Rôle technique pratique', text: 'Infrastructure, plateformes, Linux, automatisation, calcul scientifique, SRE ou IoT, avec peu de responsabilités de gestion.' },
       { label: 'Mandat ciblé', title: 'La faisabilité avant l’implantation', text: 'Une évaluation ou un prototype délimité pour valider le cas d’usage, l’architecture, l’intégration, les risques et les prochaines étapes avant un investissement plus important.' },
     ],
-    contactEyebrow: 'Amorcer une discussion', contactTitle: 'Présentez-moi le défi technique.',
-    contactBody: 'Si votre organisation cherche une personne expérimentée capable de comprendre l’environnement, de travailler de façon autonome et de livrer un résultat maintenable, discutons-en.',
-    contactLinksLabel: 'Communiquer avec Patrick Paul', contactNote: 'Établi à Gatineau, Québec, Canada. Disponible pour des postes à distance et certains mandats.',
+    contactEyebrow: 'À propos et coordonnées', contactTitle: 'Présentez-moi le défi technique.',
+    contactBody: 'Découvrez ma façon de travailler, ce que je recherche et comment me joindre pour un rôle technique ou un mandat ciblé.',
+    contactCta: 'À propos de moi et mes coordonnées',
   },
 } as const;
 
@@ -123,7 +121,7 @@ const portraitSrc = `${base}images/patrick-paul-professional-portrait.webp`;
       <p class="eyebrow">{t.role}</p><h1 id="hero-title">{t.name}</h1><p class="practice">{t.practice}</p>
       <p class="status"><span aria-hidden="true"></span>{t.status}</p>
       <p class="hero-statement">{t.headline}</p><p class="lead">{t.introduction}</p>
-      <div class="actions"><a class="button primary" href="#contact">{t.primaryCta}</a><a class="button" href="#capabilities">{t.secondaryCta}</a></div>
+      <div class="actions"><a class="button primary" href={`${base}${lang}/about/#contact`}>{t.primaryCta}</a><a class="button" href="#capabilities">{t.secondaryCta}</a></div>
     </div>
     <div class="hero-aside">
       <figure class="portrait-card"><img src={portraitSrc} alt={t.portraitAlt} width="729" height="911" loading="eager" decoding="async" fetchpriority="high" /></figure>
@@ -161,9 +159,9 @@ const portraitSrc = `${base}images/patrick-paul-professional-portrait.webp`;
     <div class="engagement-grid">{t.engagements.map((engagement) => <article class="engagement-card"><span>{engagement.label}</span><h3>{engagement.title}</h3><p>{engagement.text}</p></article>)}</div>
   </section>
 
-  <section id="contact" class="contact-section" aria-labelledby="contact-title">
+  <section class="contact-section" aria-labelledby="contact-title">
     <div><p class="eyebrow">{t.contactEyebrow}</p><h2 id="contact-title">{t.contactTitle}</h2><p class="section-copy">{t.contactBody}</p></div>
-    <nav class="contact-action" aria-label={t.contactLinksLabel}><ProfessionalLinks lang={lang} /><p>{t.contactNote}</p></nav>
+    <div class="contact-action"><a class="button primary" href={`${base}${lang}/about/#contact`}>{t.contactCta}</a></div>
   </section>
 </main>
 
