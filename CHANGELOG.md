@@ -22,12 +22,19 @@ All notable changes to this project will be documented in this file.
 - Dependency-health documentation with explicit vulnerability classification and remediation strategy.
 - Approved public email, LinkedIn, and GitHub contact links.
 - Localized professional footer with location and availability details.
+- Bilingual SME-focused positioning for employment, focused mandates, feasibility assessments, and prototypes.
+- Data-sovereignty section illustrating local, edge, hybrid, and optional cloud data flows.
+- Technical depth and applied-exploration sections covering industrial IoT, EdgeX Foundry, MQTT, home automation, 3D printing, and evaluated prototype tools.
+- Site-specific SVG favicon.
 
 ### Changed
 
 - Standardized pull request engineering-health reporting and continuous-improvement guidance in `AGENTS.md`.
 - Replaced temporary contact actions with approved, accessible contact links for remote technical positions and consulting mandates.
 - Refined the bilingual professional positioning with forward-looking language covering operational environments, R&D initiatives, proof-of-concept platforms, and technology demonstrations.
+- Clarified and aligned language routing so the site follows the client’s browser preference on a first visit, preserves explicit user selections, and falls back to English for unsupported preferences.
+- Positioned Node-RED, Losant, and Apache NiFi accurately as technologies evaluated through prototype and exploratory work.
+- Updated compatible transitive dependencies to remediate five audit findings; documented the remaining Astro-major migration requirement.
 
 ### Fixed
 

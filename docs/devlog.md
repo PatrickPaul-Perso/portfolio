@@ -1,5 +1,15 @@
 # Development Log
 
+## 2026-09-20 — SME services, feasibility, and data sovereignty
+
+The bilingual landing page now addresses small and mid-sized organizations that need either an experienced hands-on technical contributor or a focused mandate delivered independently. The revised content presents feasibility assessments and prototypes as a distinct engagement path before larger implementation investments.
+
+The technical positioning now includes Linux, automation, observability, industrial IoT, EdgeX Foundry, MQTT, edge processing, research computing, home automation, 3D printing, and digital fabrication. Node-RED, Losant, and Apache NiFi are explicitly described as technologies evaluated through prototype and exploratory work rather than production operations.
+
+A new data-sovereignty section explains local, edge, hybrid, and optional cloud-connected architectures. Restrained motion highlights the example data flow while respecting reduced-motion preferences. On a first visit, the site follows the client's browser language, falls back to English for unsupported preferences, and preserves any explicit language selection for subsequent visits.
+
+Compatible transitive dependency updates remediated findings in devalue, fast-uri, js-yaml, nanoid, and SVGO. The remaining Astro, sharp, and esbuild findings require an Astro major migration and remain documented for a separate human-approved change.
+
 ## 2026-08-04 — Approved professional portrait
 
 Patrick provided and approved a professional portrait for publication. The source image was converted to an optimized WebP asset without cropping or generative retouching, committed to the repository, and displayed on both localized landing pages with explicit dimensions and localized alternative text.
