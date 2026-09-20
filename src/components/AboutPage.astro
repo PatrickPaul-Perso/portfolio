@@ -29,11 +29,11 @@ const content = {
     lookingItems: ['Hands-on remote technical roles', 'Linux, infrastructure, DevOps, SRE, research computing, or IoT work', 'Focused feasibility, prototype, automation, and integration mandates', 'Work with limited management responsibilities and clear technical ownership'],
     contactEyebrow: 'Contact',
     contactTitle: 'Let’s discuss the role or the technical challenge.',
-    contactBody: 'The best starting point is a short message describing your environment, objective, and expected timeline.',
+    contactBody: 'The best starting point is a short message describing your environment, objective, and expected timeline. For a 3D-printing project, include the intended use, approximate dimensions, quantity, and a design file if one is available.',
     contactLabel: 'Patrick Paul professional contact links',
     locationLabel: 'Location',
     availabilityLabel: 'Availability',
-    availability: 'Remote technical positions and selected focused mandates',
+    availability: 'Remote technical positions, selected focused mandates, and local small-batch 3D-printing projects',
   },
   fr: {
     eyebrow: 'À propos de moi',
@@ -55,11 +55,11 @@ const content = {
     lookingItems: ['Rôles techniques pratiques entièrement à distance', 'Travail en Linux, infrastructure, DevOps, SRE, calcul scientifique ou IoT', 'Mandats ciblés de faisabilité, prototypage, automatisation et intégration', 'Travail avec peu de responsabilités de gestion et une prise en charge technique claire'],
     contactEyebrow: 'Coordonnées',
     contactTitle: 'Discutons du rôle ou du défi technique.',
-    contactBody: 'Le meilleur point de départ est un court message décrivant votre environnement, votre objectif et l’échéancier envisagé.',
+    contactBody: 'Le meilleur point de départ est un court message décrivant votre environnement, votre objectif et l’échéancier envisagé. Pour un projet d’impression 3D, indiquez l’usage prévu, les dimensions approximatives, la quantité et, si disponible, joignez un fichier de conception.',
     contactLabel: 'Coordonnées professionnelles de Patrick Paul',
     locationLabel: 'Lieu',
     availabilityLabel: 'Disponibilité',
-    availability: 'Postes techniques à distance et certains mandats ciblés',
+    availability: 'Postes techniques à distance, certains mandats ciblés et projets locaux d’impression 3D en petite série',
   },
 } as const;
 
@@ -73,7 +73,6 @@ const t = content[lang];
       <h1 id="about-title">{t.title}</h1>
       <p class="lead">{t.intro}</p>
     </div>
-    <figure class="about-portrait"><img src={portraitSrc} alt={t.portraitAlt} width="729" height="911" decoding="async" /></figure>
   </section>
 
   <section class="about-content" aria-labelledby="approach-title">
@@ -87,6 +86,7 @@ const t = content[lang];
   </section>
 
   <section id="contact" class="contact-card" aria-labelledby="contact-title">
+    <figure class="contact-portrait"><img src={portraitSrc} alt={t.portraitAlt} width="729" height="911" loading="lazy" decoding="async" /></figure>
     <div><p class="eyebrow">{t.contactEyebrow}</p><h2 id="contact-title">{t.contactTitle}</h2><p>{t.contactBody}</p></div>
     <div class="contact-details">
       <nav aria-label={t.contactLabel}><ProfessionalLinks lang={lang} showEmailAddress /></nav>
@@ -100,14 +100,14 @@ const t = content[lang];
 
 <style>
   .about-page{padding-bottom:clamp(5rem,10vw,8rem)}
-  .about-hero{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(16rem,.55fr);gap:clamp(3rem,8vw,7rem);align-items:center;padding-block:clamp(4rem,9vw,8rem)}
+  .about-hero{max-width:68rem;padding-block:clamp(4rem,9vw,8rem)}
   .about-hero h1{max-width:18ch;margin-block:.7rem 1.5rem;font-size:clamp(2.5rem,6vw,5rem);letter-spacing:-.045em}
-  .about-portrait{width:min(100%,20rem);aspect-ratio:729/911;margin:0 0 0 auto;border:1px solid rgb(110 198 255/28%);border-radius:1.5rem;overflow:hidden;background:var(--surface);box-shadow:0 2rem 5rem rgb(0 0 0/25%)}
-  .about-portrait img{width:100%;height:100%;object-fit:cover}
   .about-content{display:grid;grid-template-columns:minmax(13rem,.6fr) minmax(0,1.4fr);gap:2rem 5rem;padding-block:clamp(4rem,8vw,7rem);border-top:1px solid var(--border)}
   h2{margin:.5rem 0 0;font-size:clamp(1.8rem,4vw,3rem);line-height:1.12;letter-spacing:-.03em}.prose{max-width:68ch}.prose p:first-child{margin-top:0}.prose p,.about-grid p,.about-grid li,.contact-card p,.contact-card dd{color:var(--muted);font-size:1.06rem}
   .about-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;padding-bottom:clamp(4rem,8vw,7rem)}.about-grid article{padding:clamp(1.5rem,4vw,2.5rem);border:1px solid var(--border);border-radius:1rem;background:var(--surface)}.about-grid ul{display:grid;gap:.75rem;margin-bottom:0;padding-left:1.25rem}
-  .contact-card{display:grid;grid-template-columns:minmax(0,1fr) minmax(20rem,.8fr);gap:3rem 5rem;align-items:start;padding:clamp(2rem,6vw,4rem);border:1px solid rgb(97 214 150/32%);border-radius:1.5rem;background:radial-gradient(circle at 100% 0,rgb(97 214 150/12%),transparent 42%),var(--surface)}
+  .contact-card{display:grid;grid-template-columns:minmax(11rem,.42fr) minmax(0,1fr) minmax(18rem,.8fr);gap:2.5rem clamp(2.5rem,5vw,4.5rem);align-items:start;padding:clamp(2rem,6vw,4rem);border:1px solid rgb(97 214 150/32%);border-radius:1.5rem;background:radial-gradient(circle at 100% 0,rgb(97 214 150/12%),transparent 42%),var(--surface)}
+  .contact-portrait{width:min(100%,15rem);aspect-ratio:729/911;margin:0;border:1px solid rgb(110 198 255/28%);border-radius:1rem;overflow:hidden;background:var(--background);box-shadow:0 1.25rem 3rem rgb(0 0 0/22%)}.contact-portrait img{width:100%;height:100%;object-fit:cover}
   .contact-details{display:grid;gap:1.5rem}.contact-details dl{display:grid;gap:1rem;margin:0}.contact-details dl div{display:grid;gap:.2rem}.contact-details dt{font-weight:800}.contact-details dd{margin:0}
-  @media(max-width:800px){.about-hero,.about-content,.about-grid,.contact-card{grid-template-columns:1fr}.about-portrait{width:min(100%,18rem);margin-left:0}}
+  @media(max-width:950px){.contact-card{grid-template-columns:minmax(10rem,.4fr) minmax(0,1fr)}.contact-details{grid-column:1/-1}}
+  @media(max-width:800px){.about-content,.about-grid,.contact-card{grid-template-columns:1fr}.contact-details{grid-column:auto}.contact-portrait{width:min(100%,13rem)}}
 </style>

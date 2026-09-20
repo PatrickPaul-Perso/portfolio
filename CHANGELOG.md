@@ -37,6 +37,8 @@ All notable changes to this project will be documented in this file.
 - Positioned Node-RED, Losant, and Apache NiFi accurately as technologies evaluated through prototype and exploratory work.
 - Updated compatible transitive dependencies to remediate five audit findings; documented the remaining Astro-major migration requirement.
 - Replaced repeated contact details on the landing page and footer with clear links to the dedicated About page.
+- Moved the professional portrait out of the landing-page hero and into the About page contact section.
+- Added small-batch and specialized-part 3D printing to the bilingual service positioning.
 
 ### Fixed
 
