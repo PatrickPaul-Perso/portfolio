@@ -6,7 +6,7 @@ The bilingual landing page now addresses small and mid-sized organizations that 
 
 The technical positioning now includes Linux, automation, observability, industrial IoT, EdgeX Foundry, MQTT, edge processing, research computing, home automation, 3D printing, and digital fabrication. Node-RED, Losant, and Apache NiFi are explicitly described as technologies evaluated through prototype and exploratory work rather than production operations.
 
-A new data-sovereignty section explains local, edge, hybrid, and optional cloud-connected architectures. Restrained motion highlights the example data flow while respecting reduced-motion preferences. English is now the default initial route unless a visitor previously selected French.
+A new data-sovereignty section explains local, edge, hybrid, and optional cloud-connected architectures. Restrained motion highlights the example data flow while respecting reduced-motion preferences. On a first visit, the site follows the client's browser language, falls back to English for unsupported preferences, and preserves any explicit language selection for subsequent visits.
 
 Compatible transitive dependency updates remediated findings in devalue, fast-uri, js-yaml, nanoid, and SVGO. The remaining Astro, sharp, and esbuild findings require an Astro major migration and remain documented for a separate human-approved change.
 

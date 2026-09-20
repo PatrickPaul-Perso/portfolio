@@ -90,9 +90,10 @@ Target WCAG 2.2 AA.
 
 - English is the source language for documentation.
 - The website supports English and French.
-- Browser language may select the initial route.
+- On the first visit, select the website language from the client's browser preferences.
+- An explicit user language selection takes precedence over browser preferences and must be stored locally for subsequent visits.
+- Use English as the fallback when the browser preference is unavailable or unsupported.
 - A visible language switcher must always remain available.
-- Store an explicit user language choice locally.
 - Never mix English and French within the same content block.
 
 ## Generative AI transparency

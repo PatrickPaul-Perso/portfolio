@@ -32,7 +32,7 @@ All notable changes to this project will be documented in this file.
 - Standardized pull request engineering-health reporting and continuous-improvement guidance in `AGENTS.md`.
 - Replaced temporary contact actions with approved, accessible contact links for remote technical positions and consulting mandates.
 - Refined the bilingual professional positioning with forward-looking language covering operational environments, R&D initiatives, proof-of-concept platforms, and technology demonstrations.
-- Made English the default initial language while preserving the visitor’s explicit French preference.
+- Clarified and aligned language routing so the site follows the client’s browser preference on a first visit, preserves explicit user selections, and falls back to English for unsupported preferences.
 - Positioned Node-RED, Losant, and Apache NiFi accurately as technologies evaluated through prototype and exploratory work.
 - Updated compatible transitive dependencies to remediate five audit findings; documented the remaining Astro-major migration requirement.
 
