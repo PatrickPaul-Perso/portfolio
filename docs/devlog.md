@@ -1,5 +1,11 @@
 # Development Log
 
+## 2026-09-20 — Contact portrait and small-batch 3D printing
+
+Patrick’s name remains prominent on the landing page while the professional portrait now appears only beside the contact information on the About page. This keeps the landing page focused on technical value and makes the contact section more personal at the point of engagement.
+
+The bilingual capability list now includes 3D-printed prototypes, specialized parts, and small production runs. The About contact guidance asks prospective clients to provide intended use, approximate dimensions, quantity, and an available design file so that feasibility can be assessed efficiently.
+
 ## 2026-09-20 — Dedicated About and contact page
 
 The portfolio now provides synchronized English and Canadian French About pages. They bring Patrick’s working approach, applied technical interests, preferred opportunities, location, availability, email address, LinkedIn profile, and GitHub profile into one focused destination.
