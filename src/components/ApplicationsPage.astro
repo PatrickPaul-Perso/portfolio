@@ -1,0 +1,140 @@
+---
+interface Props { lang: 'en' | 'fr'; }
+const { lang } = Astro.props;
+const baseUrl = import.meta.env.BASE_URL;
+const base = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
+
+const content = {
+  en: {
+    eyebrow: 'Sectors where I can contribute',
+    title: 'Technical infrastructure applied to real operating environments.',
+    intro: 'My experience is transferable wherever equipment, Linux systems, data, automation, and people need to work together. These are examples of environments where I can assess feasibility, build a focused prototype, or help deliver a maintainable implementation.',
+    agriculture: {
+      eyebrow: 'Featured sector',
+      title: 'Smart agriculture and controlled environments',
+      body: 'Farms, greenhouses, indoor-growing operations, equipment suppliers, and agricultural technology firms increasingly depend on connected sensors, local processing, reliable data flows, and automation. I can help evaluate and integrate the technical layer between field equipment and useful operational information.',
+      signalsTitle: 'Operational signals',
+      signals: ['Soil and substrate conditions', 'Temperature and humidity', 'Water use and irrigation', 'Energy consumption', 'Equipment status and alerts'],
+      contributionsTitle: 'Potential contributions',
+      contributions: [
+        'Assess a use case, connectivity constraints, integration options, and implementation risk.',
+        'Prototype a Linux edge gateway using MQTT, EdgeX Foundry, open interfaces, or an appropriate lightweight stack.',
+        'Normalize, store, visualize, and route telemetry with tools such as Telegraf, InfluxDB, Grafana, or evaluated low-code platforms.',
+        'Design local, offline-capable, or hybrid data flows when rural connectivity, data control, or intellectual property matters.',
+        'Produce specialized sensor mounts, enclosures, adapters, or other 3D-printed parts in small quantities.',
+      ],
+      examplesTitle: 'Concrete project ideas',
+      examples: [
+        { title: 'Computer-vision-assisted agriculture', text: 'Capture field or greenhouse imagery, filter and organize it at the edge, and prepare a traceable dataset for crop, pest, disease, or quality classifiers.' },
+        { title: 'Data capture and classifier preparation', text: 'Define useful labels, collect representative examples, establish annotation and quality-control workflows, version datasets, and evaluate whether a classifier is technically viable.' },
+        { title: 'Annotation pipeline integration', text: 'Prepare datasets and integrate an external service such as Amazon Mechanical Turk into the data pipeline, including task packaging, imports and exports, quality metadata, and dataset versioning. The annotation work remains with the selected service.' },
+        { title: 'Maple operation instrumentation', text: 'Prototype monitoring for temperature, pressure, flow, tank levels, pumps, connectivity, and equipment state, with local dashboards and alerts suited to intermittent rural connectivity.' },
+        { title: 'Rapid field prototyping', text: 'Combine microcontrollers, sensors, a Linux edge gateway, data collection, dashboards, and small-batch 3D-printed mounts or enclosures to test an idea before investing in deployment.' },
+      ],
+      note: 'The starting point can be a bounded feasibility assessment rather than a full deployment.',
+    },
+    otherEyebrow: 'Other sectors',
+    otherTitle: 'The same integration skills apply beyond agriculture.',
+    environments: [
+      { title: 'Light manufacturing and industrial operations', text: 'Connect legacy equipment, collect telemetry, monitor production assets, introduce edge processing, and improve operational visibility without forcing every workload into the cloud.', tags: ['Equipment telemetry', 'Edge gateways', 'Monitoring', 'Small-batch parts'] },
+      { title: 'Research and laboratory environments', text: 'Support Linux platforms, scientific computing, secure research environments, data pipelines, storage, containers, automation, and reproducible technical workflows.', tags: ['Linux', 'Research computing', 'Containers', 'Data pipelines'] },
+      { title: 'Smart buildings and facilities', text: 'Integrate environmental, energy, and equipment data for local automation, alerts, dashboards, and evidence-based operational improvements.', tags: ['Environmental sensing', 'Energy data', 'Local automation', 'Dashboards'] },
+      { title: 'Data-intensive small and mid-sized organizations', text: 'Reduce manual work, improve observability, connect applications and data sources, and turn a proof of concept into a documented and supportable system.', tags: ['Automation', 'Observability', 'Integration', 'Operational handoff'] },
+    ],
+    pathEyebrow: 'A practical engagement path',
+    pathTitle: 'Start small, validate the difficult parts, then decide what to scale.',
+    steps: [
+      { number: '01', title: 'Understand', text: 'Clarify the operational problem, constraints, existing equipment, data ownership, and success criteria.' },
+      { number: '02', title: 'Validate', text: 'Test the uncertain integration points through a focused feasibility assessment or prototype.' },
+      { number: '03', title: 'Deliver', text: 'Implement the agreed scope, document it, and provide a clear operational handoff or next-step recommendation.' },
+    ],
+    ctaTitle: 'Have a sector or use case in mind?',
+    ctaBody: 'Describe the equipment, data, constraint, or outcome you are considering. I can help determine whether a focused assessment or prototype is the right next step.',
+    cta: 'Contact Patrick',
+  },
+  fr: {
+    eyebrow: 'Domaines où je peux contribuer',
+    title: 'Des infrastructures techniques appliquées aux opérations réelles.',
+    intro: 'Mon expérience est transférable partout où des équipements, des systèmes Linux, des données, de l’automatisation et des personnes doivent fonctionner ensemble. Voici des domaines où je peux évaluer la faisabilité, réaliser un prototype ciblé ou contribuer à une implantation maintenable.',
+    agriculture: {
+      eyebrow: 'Domaine mis en valeur',
+      title: 'Agriculture intelligente et environnements contrôlés',
+      body: 'Les fermes, les serres, les installations de culture intérieure, les fournisseurs d’équipements et les entreprises agrotechnologiques dépendent de plus en plus de capteurs connectés, de traitement local, de flux de données fiables et d’automatisation. Je peux aider à évaluer et à intégrer la couche technique entre les équipements sur le terrain et l’information utile aux opérations.',
+      signalsTitle: 'Signaux opérationnels',
+      signals: ['État du sol et des substrats', 'Température et humidité', 'Utilisation de l’eau et irrigation', 'Consommation d’énergie', 'État des équipements et alertes'],
+      contributionsTitle: 'Contributions possibles',
+      contributions: [
+        'Évaluer un cas d’usage, les contraintes de connectivité, les options d’intégration et les risques d’implantation.',
+        'Prototyper une passerelle edge Linux avec MQTT, EdgeX Foundry, des interfaces ouvertes ou une pile légère appropriée.',
+        'Normaliser, stocker, visualiser et acheminer la télémétrie avec Telegraf, InfluxDB, Grafana ou des plateformes low-code évaluées.',
+        'Concevoir des flux de données locaux, capables de fonctionner hors ligne ou hybrides lorsque la connectivité rurale, le contrôle des données ou la propriété intellectuelle sont importants.',
+        'Produire en petite quantité des supports de capteurs, boîtiers, adaptateurs ou autres pièces spécialisées imprimées en 3D.',
+      ],
+      examplesTitle: 'Idées de projets concrets',
+      examples: [
+        { title: 'Agriculture assistée par vision artificielle', text: 'Capturer des images au champ ou en serre, les filtrer et les organiser à la périphérie, puis préparer un jeu de données traçable pour des classificateurs de cultures, ravageurs, maladies ou qualité.' },
+        { title: 'Capture de données et préparation de classificateurs', text: 'Définir des étiquettes utiles, recueillir des exemples représentatifs, établir un processus d’annotation et de contrôle qualité, versionner les jeux de données et vérifier la faisabilité technique d’un classificateur.' },
+        { title: 'Intégration du pipeline d’annotation', text: 'Préparer les jeux de données et intégrer un service externe comme Amazon Mechanical Turk au pipeline, notamment pour l’assemblage des tâches, les imports et exports, les métadonnées de qualité et le versionnement. Le travail d’annotation demeure confié au service retenu.' },
+        { title: 'Instrumentation d’érablières', text: 'Prototyper la surveillance de la température, de la pression, du débit, des niveaux de réservoir, des pompes, de la connectivité et de l’état des équipements, avec tableaux de bord locaux et alertes adaptés à une connectivité rurale intermittente.' },
+        { title: 'Prototypage rapide sur le terrain', text: 'Combiner microcontrôleurs, capteurs, passerelle edge Linux, collecte de données, tableaux de bord et supports ou boîtiers imprimés en 3D en petite série afin de tester une idée avant d’investir dans un déploiement.' },
+      ],
+      note: 'Le point de départ peut être une évaluation de faisabilité bien délimitée plutôt qu’un déploiement complet.',
+    },
+    otherEyebrow: 'Autres domaines',
+    otherTitle: 'Les mêmes compétences d’intégration s’appliquent au-delà de l’agriculture.',
+    environments: [
+      { title: 'Fabrication légère et opérations industrielles', text: 'Relier des équipements existants, recueillir la télémétrie, surveiller les actifs de production, introduire le traitement edge et améliorer la visibilité sans imposer le nuage à toutes les charges de travail.', tags: ['Télémétrie', 'Passerelles edge', 'Surveillance', 'Pièces en petite série'] },
+      { title: 'Recherche et laboratoires', text: 'Soutenir les plateformes Linux, le calcul scientifique, les environnements de recherche sécurisés, les pipelines de données, le stockage, les conteneurs, l’automatisation et les méthodes reproductibles.', tags: ['Linux', 'Calcul scientifique', 'Conteneurs', 'Pipelines de données'] },
+      { title: 'Bâtiments intelligents et installations', text: 'Intégrer les données environnementales, énergétiques et d’équipements pour l’automatisation locale, les alertes, les tableaux de bord et l’amélioration des opérations fondée sur les données.', tags: ['Capteurs environnementaux', 'Données énergétiques', 'Automatisation locale', 'Tableaux de bord'] },
+      { title: 'PME axées sur les données', text: 'Réduire le travail manuel, améliorer l’observabilité, relier les applications et les sources de données, puis transformer une preuve de concept en système documenté et soutenable.', tags: ['Automatisation', 'Observabilité', 'Intégration', 'Transfert opérationnel'] },
+    ],
+    pathEyebrow: 'Une démarche pratique',
+    pathTitle: 'Commencer petit, valider les éléments difficiles, puis décider quoi déployer à plus grande échelle.',
+    steps: [
+      { number: '01', title: 'Comprendre', text: 'Clarifier le problème opérationnel, les contraintes, les équipements existants, la propriété des données et les critères de réussite.' },
+      { number: '02', title: 'Valider', text: 'Tester les points d’intégration incertains au moyen d’une évaluation de faisabilité ou d’un prototype ciblé.' },
+      { number: '03', title: 'Livrer', text: 'Implanter la portée convenue, la documenter et fournir un transfert opérationnel clair ou une recommandation pour la prochaine étape.' },
+    ],
+    ctaTitle: 'Vous avez un domaine ou un cas d’usage en tête?',
+    ctaBody: 'Décrivez l’équipement, les données, la contrainte ou le résultat envisagé. Je peux vous aider à déterminer si une évaluation ciblée ou un prototype constitue la bonne prochaine étape.',
+    cta: 'Communiquer avec Patrick',
+  },
+} as const;
+
+const t = content[lang];
+---
+
+<main id="main-content" class="applications-page">
+  <section class="applications-hero" aria-labelledby="applications-title">
+    <p class="eyebrow">{t.eyebrow}</p>
+    <h1 id="applications-title">{t.title}</h1>
+    <p class="lead">{t.intro}</p>
+  </section>
+
+  <section id="agriculture" class="agriculture-section" aria-labelledby="agriculture-title">
+    <div class="agriculture-intro"><p class="eyebrow">{t.agriculture.eyebrow}</p><h2 id="agriculture-title">{t.agriculture.title}</h2><p>{t.agriculture.body}</p><blockquote>{t.agriculture.note}</blockquote></div>
+    <div class="signal-panel"><h3>{t.agriculture.signalsTitle}</h3><ul>{t.agriculture.signals.map((signal) => <li><span aria-hidden="true"></span>{signal}</li>)}</ul></div>
+    <div class="contribution-panel"><h3>{t.agriculture.contributionsTitle}</h3><ul>{t.agriculture.contributions.map((item) => <li>{item}</li>)}</ul></div>
+    <div class="example-panel"><h3>{t.agriculture.examplesTitle}</h3><div class="example-grid">{t.agriculture.examples.map((example) => <article><h4>{example.title}</h4><p>{example.text}</p></article>)}</div></div>
+  </section>
+
+  <section class="environments-section" aria-labelledby="environments-title">
+    <div class="section-heading"><p class="eyebrow">{t.otherEyebrow}</p><h2 id="environments-title">{t.otherTitle}</h2></div>
+    <div class="environment-grid">{t.environments.map((environment) => <article><h3>{environment.title}</h3><p>{environment.text}</p><ul class="tag-list">{environment.tags.map((tag) => <li>{tag}</li>)}</ul></article>)}</div>
+  </section>
+
+  <section class="path-section" aria-labelledby="path-title">
+    <div class="section-heading"><p class="eyebrow">{t.pathEyebrow}</p><h2 id="path-title">{t.pathTitle}</h2></div>
+    <ol>{t.steps.map((step) => <li><span>{step.number}</span><div><h3>{step.title}</h3><p>{step.text}</p></div></li>)}</ol>
+  </section>
+
+  <section class="applications-cta" aria-labelledby="cta-title"><div><h2 id="cta-title">{t.ctaTitle}</h2><p>{t.ctaBody}</p></div><a class="button primary" href={`${base}${lang}/about/#contact`}>{t.cta}</a></section>
+</main>
+
+<style>
+  .applications-page{padding-bottom:clamp(5rem,10vw,8rem)}.applications-hero{max-width:75rem;padding-block:clamp(4rem,9vw,8rem)}.applications-hero h1{max-width:18ch;margin-block:.7rem 1.5rem;font-size:clamp(2.8rem,6.5vw,5.5rem);letter-spacing:-.05em}
+  h2{margin:.5rem 0 0;font-size:clamp(2rem,4vw,3.6rem);line-height:1.1;letter-spacing:-.035em}h3{line-height:1.25}.agriculture-section{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(16rem,.55fr);gap:2rem 4rem;padding:clamp(2rem,6vw,4rem);border:1px solid rgb(97 214 150/38%);border-radius:1.5rem;background:radial-gradient(circle at 100% 0,rgb(97 214 150/13%),transparent 40%),linear-gradient(145deg,rgb(9 29 35/96%),rgb(8 20 35/96%))}.agriculture-intro p:not(.eyebrow),.signal-panel li,.contribution-panel li,.example-panel p,.environment-grid p,.path-section p,.applications-cta p{color:var(--muted)}.agriculture-intro blockquote{margin:1.75rem 0 0;padding:.4rem 0 .4rem 1.25rem;border-left:3px solid var(--green);font-weight:700}.signal-panel{padding:1.35rem;border:1px solid rgb(110 198 255/20%);border-radius:1rem;background:rgb(7 17 31/65%)}.signal-panel h3,.contribution-panel h3,.example-panel h3{margin-top:0}.signal-panel ul{display:grid;gap:.7rem;margin:0;padding:0;list-style:none}.signal-panel li{display:flex;align-items:center;gap:.65rem}.signal-panel li span{width:.55rem;height:.55rem;border-radius:50%;background:var(--green);box-shadow:0 0 0 .28rem rgb(97 214 150/10%)}.contribution-panel,.example-panel{grid-column:1/-1;padding-top:1.5rem;border-top:1px solid rgb(97 214 150/24%)}.contribution-panel ul{display:grid;grid-template-columns:repeat(2,1fr);gap:.9rem 2.5rem;padding-left:1.2rem}.example-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}.example-grid article{padding:1.25rem;border:1px solid rgb(110 198 255/18%);border-radius:.9rem;background:rgb(7 17 31/58%)}.example-grid article:last-child{grid-column:1/-1}.example-grid h4{margin:0 0 .55rem;color:var(--green-soft);font-size:1.02rem}.example-grid p{margin:0}
+  .environments-section,.path-section{padding-block:clamp(5rem,10vw,8rem);border-top:1px solid var(--border)}.environments-section{margin-top:clamp(5rem,10vw,8rem)}.section-heading{display:grid;grid-template-columns:minmax(10rem,.42fr) minmax(0,1fr);gap:2rem 4rem;align-items:start;margin-bottom:3rem}.environment-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}.environment-grid article{padding:clamp(1.5rem,4vw,2.5rem);border:1px solid var(--border);border-radius:1rem;background:var(--surface)}.environment-grid h3{margin:0;font-size:1.4rem}.tag-list{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.5rem 0 0;padding:0;list-style:none}.tag-list li{padding:.4rem .65rem;border:1px solid rgb(110 198 255/24%);border-radius:999px;color:var(--accent-soft);font-size:.82rem;font-weight:700}
+  .path-section ol{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:0;padding:0;list-style:none}.path-section li{display:grid;grid-template-columns:auto 1fr;gap:1rem;padding:1.5rem;border-top:2px solid var(--green);background:rgb(13 27 45/55%)}.path-section li>span{color:var(--green-soft);font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-weight:800}.path-section h3{margin:0}.path-section p{margin-bottom:0}.applications-cta{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2rem 4rem;align-items:center;padding:clamp(2rem,6vw,4rem);border:1px solid rgb(110 198 255/28%);border-radius:1.5rem;background:var(--surface)}.applications-cta h2{margin-top:0}.applications-cta p{max-width:65ch;margin-bottom:0}
+  @media(max-width:800px){.agriculture-section,.section-heading,.applications-cta{grid-template-columns:1fr}.contribution-panel ul,.example-grid,.environment-grid,.path-section ol{grid-template-columns:1fr}.example-grid article:last-child{grid-column:auto}.applications-cta{align-items:start}}
+</style>

@@ -27,6 +27,7 @@ All notable changes to this project will be documented in this file.
 - Technical depth and applied-exploration sections covering industrial IoT, EdgeX Foundry, MQTT, home automation, 3D printing, and evaluated prototype tools.
 - Site-specific SVG favicon.
 - Dedicated bilingual About page with prominently positioned professional contact information.
+- Dedicated bilingual Sectors page with a featured smart-agriculture section, concrete project ideas, and transferable use cases for other operating environments.
 
 ### Changed
 
@@ -39,6 +40,8 @@ All notable changes to this project will be documented in this file.
 - Replaced repeated contact details on the landing page and footer with clear links to the dedicated About page.
 - Moved the professional portrait out of the landing-page hero and into the About page contact section.
 - Added small-batch and specialized-part 3D printing to the bilingual service positioning.
+- Aligned page metadata and footer positioning with the durable Senior Technical Infrastructure Specialist headline.
+- Added a concise sector summary and link on the landing page, and clarified data-annotation work as external-service integration within a broader data pipeline.
 
 ### Fixed
 
