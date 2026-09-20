@@ -9,7 +9,7 @@ const content = {
     status: 'Open to selected roles and focused mandates',
     headline: 'Practical infrastructure for connected operations.',
     introduction: 'I help small and mid-sized organizations solve focused technology challenges: stabilizing Linux platforms, automating operations, connecting equipment and data, and moving prototypes toward reliable operation.',
-    primaryCta: 'Start a conversation', secondaryCta: 'See how I can help',
+    primaryCta: 'Start a conversation', secondaryCta: 'Explore applications',
     fitLabel: 'A practical fit for',
     fitItems: ['Hands-on technical roles', 'Feasibility assessments and prototypes', 'Independent delivery with a clear handoff'],
     valueEyebrow: 'What I bring',
@@ -62,7 +62,7 @@ const content = {
     status: 'Ouvert à certains postes et mandats ciblés',
     headline: 'Des infrastructures pratiques pour des opérations connectées.',
     introduction: 'J’aide les petites et moyennes organisations à résoudre des défis technologiques précis : stabiliser leurs plateformes Linux, automatiser leurs opérations, relier leurs équipements et leurs données, puis amener leurs prototypes vers une exploitation fiable.',
-    primaryCta: 'Amorcer une discussion', secondaryCta: 'Voir comment je peux aider',
+    primaryCta: 'Amorcer une discussion', secondaryCta: 'Voir les milieux',
     fitLabel: 'Un profil adapté aux besoins suivants',
     fitItems: ['Rôles techniques pratiques', 'Évaluations de faisabilité et prototypes', 'Livraison autonome avec transfert clair'],
     valueEyebrow: 'Ce que j’apporte',
@@ -122,7 +122,7 @@ const base = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
       <p class="eyebrow">{t.role}</p><h1 id="hero-title">{t.name}</h1><p class="practice">{t.practice}</p>
       <p class="status"><span aria-hidden="true"></span>{t.status}</p>
       <p class="hero-statement">{t.headline}</p><p class="lead">{t.introduction}</p>
-      <div class="actions"><a class="button primary" href={`${base}${lang}/about/#contact`}>{t.primaryCta}</a><a class="button" href="#capabilities">{t.secondaryCta}</a></div>
+      <div class="actions"><a class="button primary" href={`${base}${lang}/about/#contact`}>{t.primaryCta}</a><a class="button" href={`${base}${lang}/applications/`}>{t.secondaryCta}</a></div>
     </div>
     <aside class="fit-card" aria-label={t.fitLabel}><strong>{t.fitLabel}</strong><ul>{t.fitItems.map((item) => <li>{item}</li>)}</ul></aside>
   </section>

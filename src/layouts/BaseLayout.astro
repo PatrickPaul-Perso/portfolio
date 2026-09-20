@@ -21,8 +21,10 @@ const skipLabel = lang === 'en' ? 'Skip to main content' : 'Aller au contenu pri
 const languageNavLabel = lang === 'en' ? 'Language selection' : 'Choix de la langue';
 const primaryNavLabel = lang === 'en' ? 'Primary navigation' : 'Navigation principale';
 const homeLabel = lang === 'en' ? 'Home' : 'Accueil';
+const applicationsLabel = lang === 'en' ? 'Applications' : 'Milieux';
 const aboutLabel = lang === 'en' ? 'About me' : 'À propos';
 const isHome = localizedPath === '';
+const isApplications = localizedPath === 'applications/';
 const isAbout = localizedPath === 'about/';
 const footer = lang === 'en'
   ? {
@@ -53,6 +55,7 @@ const footer = lang === 'en'
         <div class="header-actions">
           <nav class="primary-nav" aria-label={primaryNavLabel}>
             <a href={`${base}${lang}/`} aria-current={isHome ? 'page' : undefined}>{homeLabel}</a>
+            <a href={`${base}${lang}/applications/`} aria-current={isApplications ? 'page' : undefined}>{applicationsLabel}</a>
             <a href={`${base}${lang}/about/`} aria-current={isAbout ? 'page' : undefined}>{aboutLabel}</a>
           </nav>
           <nav aria-label={languageNavLabel}>
@@ -67,7 +70,7 @@ const footer = lang === 'en'
         <div class="footer-identity">
           <strong class="footer-name">Patrick Paul</strong>
           <span>{footer.role}</span>
-          <span class="footer-practice">Linux <span aria-hidden="true">•</span> DevOps <span aria-hidden="true">•</span> IoT</span>
+          <span class="footer-practice">{lang === 'en' ? 'Linux • Automation • Edge & IoT • Data Platforms' : 'Linux • Automatisation • Edge et IoT • Plateformes de données'}</span>
         </div>
         <p class="footer-about"><a href={`${base}${lang}/about/`}>{footer.about}</a></p>
       </div>
@@ -103,7 +106,7 @@ const footer = lang === 'en'
   .site-name, .language-link, .primary-nav a { min-height: 44px; display: inline-flex; align-items: center; text-decoration: none; }
   .site-name { color: var(--text); font-size: clamp(1.2rem, 3vw, 1.55rem); font-weight: 800; line-height: 1.1; letter-spacing: -.03em; }
   .header-actions, .primary-nav { display: flex; align-items: center; gap: .35rem; }
-  .primary-nav a { padding-inline: .7rem; color: var(--muted); font-weight: 700; }
+  .primary-nav a { padding-inline: .6rem; color: var(--muted); font-size: .95rem; font-weight: 700; }
   .primary-nav a:hover, .primary-nav a[aria-current='page'] { color: var(--text); }
   .primary-nav a[aria-current='page'] { text-decoration: underline; text-decoration-color: var(--green); text-underline-offset: .45rem; }
   .language-link { padding-inline: .75rem; }

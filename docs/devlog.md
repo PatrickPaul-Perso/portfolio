@@ -1,5 +1,11 @@
 # Development Log
 
+## 2026-09-20 — Applications and smart-agriculture positioning
+
+The portfolio now includes synchronized English and Canadian French Applications pages. A featured smart-agriculture section connects Patrick’s Linux, edge, IoT, telemetry, data-sovereignty, feasibility, and small-batch 3D-printing capabilities to farms, greenhouses, indoor-growing operations, equipment suppliers, and agricultural technology firms without claiming unverified agricultural deployment experience.
+
+Additional sections describe transferable applications in light manufacturing, research and laboratories, smart buildings, and data-intensive SMEs. A three-step understand, validate, and deliver path positions a bounded feasibility assessment or prototype as a practical starting point. Page metadata and footer wording now match the durable Senior Technical Infrastructure Specialist positioning.
+
 ## 2026-09-20 — Contact portrait and small-batch 3D printing
 
 Patrick’s name remains prominent on the landing page while the professional portrait now appears only beside the contact information on the About page. This keeps the landing page focused on technical value and makes the contact section more personal at the point of engagement.
