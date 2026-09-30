@@ -1,5 +1,17 @@
 # Development Log
 
+## 2026-09-30 — Dual base paths for static hosting
+
+Made Astro's base path configurable per build. The GitHub Pages workflow sets `/portfolio` to preserve the printed project URL, while Cloudflare Workers Builds uses the default `/`. Added a repository-owned Wrangler configuration and local Wrangler dependency for Cloudflare Workers Static Assets. ADR 0006 extends ADR 0002 while retaining its GitHub Pages path.
+
+Validation: `npm ci`, `npm run check`, and both `npm run build` variants passed in Docker Compose. Each build generated ten HTML routes. All 94 local links and asset references resolved in each variant; the GitHub redirects use `/portfolio/` and the Cloudflare redirects use `/`. The GitHub Pages preview returned HTTP 200 for `/portfolio/`, `/portfolio/en/`, `/portfolio/fr/`, and a prefixed stylesheet. Wrangler's dry run read 28 static files, and `wrangler dev` returned HTTP 200 for `/`, `/en/`, `/fr/`, and `/en/about/`. GitHub Pages keeps its current URL; Cloudflare Workers Builds and the `portfolio.forgenord.ca` custom hostname remain external configuration.
+
+## 2026-09-30 — Docker Compose development workflow
+
+Added a pinned Node.js service in `compose.yaml` so dependency installation, Astro checks, builds, and local preview run without host or global Node.js tools. Updated the agent guidance, README, contribution guide, and validation checklist with the corresponding Compose commands and browser-based usability checks.
+
+Validation: `docker compose config --quiet`, `npm ci`, `npm run check`, and `npm run build` all passed through the container. The built-site preview returned HTTP 200 for `/portfolio/`, `/portfolio/en/`, and `/portfolio/fr/`. Visual, keyboard, and reduced-motion checks still require an interactive browser review.
+
 ## 2026-09-20 — NRC-GAMMA selected work and concise English title
 
 The landing page now presents NRC-GAMMA as public, verifiable evidence of Patrick’s collaborative work across edge image capture, data preparation, external annotation integration, quality assurance, and applied computer vision. The bilingual section uses only claims supported by the public repository and publication: Patrick is identified as a core team member and co-author, and the published dataset metrics and CC BY 4.0 license are shown with direct source links.
