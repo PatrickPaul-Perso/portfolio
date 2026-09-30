@@ -19,20 +19,37 @@ A bilingual professional portfolio focused on technical infrastructure, Linux, a
 - Modern CSS
 - GitHub Actions
 - GitHub Pages
+- Cloudflare Workers Static Assets
 
 ## Local development
 
-```bash
-npm ci
-npm run dev
-```
+Docker Compose is the development environment. The Node.js image is pinned in `compose.yaml`, and npm dependencies are locked in `package-lock.json`. Install dependencies and run Node.js, npm, and Astro inside the container; no global or host Node.js installation is needed.
 
-Run validation with:
+From the repository root:
 
 ```bash
-npm run check
-npm run build
+docker compose run --rm --user "$(id -u):$(id -g)" app npm ci
+docker compose run --rm --service-ports --user "$(id -u):$(id -g)" app
 ```
+
+Open `http://localhost:4321/`. Stop the development server with Ctrl+C.
+
+## Build and usability checks
+
+Run the project checks and default Cloudflare static build inside the same container. The GitHub Pages `/portfolio/` build command is in the [deployment instructions](./docs/deployment.md):
+
+```bash
+docker compose run --rm --user "$(id -u):$(id -g)" app npm run check
+docker compose run --rm --user "$(id -u):$(id -g)" app npm run build
+```
+
+To inspect the built site in a browser, start Astro's preview server:
+
+```bash
+docker compose run --rm --service-ports --user "$(id -u):$(id -g)" app npm run preview -- --host 0.0.0.0
+```
+
+Open `http://localhost:4321/` and follow the [validation checklist](./docs/validation.md): check mobile and desktop layouts, English and French pages, language switching, keyboard navigation and visible focus, reduced motion, and internal links from the site root. Stop the preview server with Ctrl+C. After changing dependencies, update `package-lock.json` with npm in the container and repeat `npm ci`, `npm run check`, and `npm run build`.
 
 ## Documentation
 
@@ -47,4 +64,4 @@ npm run build
 
 ## Deployment
 
-The production site is built automatically from `main` and published to GitHub Pages.
+The site is built from the same source for both hosts. GitHub Actions keeps `https://patrickpaul-perso.github.io/portfolio/` working for existing printed links; Cloudflare Workers Builds will serve `https://portfolio.forgenord.ca/` from the root after its repository connection and custom hostname are configured. The [deployment instructions](./docs/deployment.md) show how to validate both build variants.

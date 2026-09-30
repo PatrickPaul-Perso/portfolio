@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 
+- Cloudflare Workers Static Assets configuration for a second deployment of the static site.
 - Astro project foundation.
 - GitHub Pages deployment workflow.
 - English and French landing routes.
@@ -32,6 +33,7 @@ All notable changes to this project will be documented in this file.
 
 ### Changed
 
+- Astro builds preserve `/portfolio/` on GitHub Pages and use root paths on Cloudflare.
 - Standardized pull request engineering-health reporting and continuous-improvement guidance in `AGENTS.md`.
 - Replaced temporary contact actions with approved, accessible contact links for remote technical positions and consulting mandates.
 - Refined the bilingual professional positioning with forward-looking language covering operational environments, R&D initiatives, proof-of-concept platforms, and technology demonstrations.

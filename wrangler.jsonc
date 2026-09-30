@@ -1,0 +1,15 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "patrick-paul-portfolio",
+  "compatibility_date": "2026-09-30",
+  "assets": {
+    "directory": "./dist",
+    "html_handling": "auto-trailing-slash"
+  },
+  "previews": {},
+  "preview_urls": true,
+  "observability": {
+    "enabled": true,
+    "traces": { "enabled": true }
+  }
+}

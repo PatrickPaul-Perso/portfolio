@@ -6,6 +6,6 @@ Milestone 1 is complete and merged into `main`. It includes the bilingual landin
 
 A post-merge correction on `fix/localized-navigation` adds localized AI transparency routes, language-matched footer navigation, a backward-compatible language-aware redirect, and accurate landing-page CTA behaviour.
 
-Local validation is complete: `npm ci`, `npm run check`, and `npm run build` succeed, and the generated routes and internal links work under the `/portfolio/` base path across the required responsive layouts.
+Local validation is complete: `npm ci`, `npm run check`, and `npm run build` succeed, and the generated routes and internal links work under the `/portfolio/` base path on GitHub Pages across the required responsive layouts.
 
 Publication remains pending Patrick’s approval of the content, professional portrait, and direct contact information.
